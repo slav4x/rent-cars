@@ -37,6 +37,15 @@ export default function Hero() {
 				unoptimized={true}
 				className={styles.cars}
 			/>
+			<Image
+				src="/img/hero-background.jpg"
+				alt=""
+				width={3000}
+				height={1042}
+				quality={100}
+				unoptimized={true}
+				className={styles.bg}
+			/>
 		</section>
 	);
 }
