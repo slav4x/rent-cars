@@ -1,14 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import styles from './Benefits.module.sass';
-import { useLangRouting } from '@/lib/i18n/useLangRouting';
 import Image from 'next/image';
 import { cn } from '@/lib/utils/cn';
 
 export default function Benefits() {
-	const { href } = useLangRouting();
-
 	return (
 		<section className={styles.benefits}>
 			<div className="container">
