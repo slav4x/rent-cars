@@ -12,9 +12,11 @@
 	"dependencies": {
 		"modern-normalize": "^3.0.1",
 		"next": "16.1.6",
+		"prokrutchik": "^3.0.2",
 		"react": "19.2.3",
 		"react-dom": "19.2.3",
 		"react-hook-form": "^7.71.1",
+		"react-prokrutchik": "^3.1.0",
 		"zod": "^4.3.6",
 		"zustand": "^5.0.11"
 	},
