@@ -10,6 +10,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@splidejs/react-splide": "^0.7.12",
 		"modern-normalize": "^3.0.1",
 		"next": "16.1.6",
 		"prokrutchik": "^3.0.2",
