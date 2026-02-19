@@ -1,3 +1,4 @@
+import About from './sections/About/About';
 import Benefits from './sections/Benefits/Benefits';
 import Catalog from './sections/Catalog/Catalog';
 import Conditions from './sections/Conditions/Conditions';
@@ -12,6 +13,7 @@ export default function HomePage() {
 			<Benefits />
 			<Conditions />
 			<Reviews />
+			<About />
 		</>
 	);
 }

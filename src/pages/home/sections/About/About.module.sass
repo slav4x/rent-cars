@@ -1,0 +1,39 @@
+.about
+	height: 100svh
+	border-radius: 70px
+	overflow: hidden
+	position: relative
+	padding: 70px 0
+	background: linear-gradient(16.25deg, rgba(255, 255, 255, 0.2) -1.85%, rgba(255, 255, 255, 0) 80.6%)
+	:global(.container)
+		height: 100%
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		flex-direction: column
+		justify-content: flex-end
+	video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+		z-index: -1
+
+.card
+	max-width: 880px
+	padding: 50px
+	border-radius: 40px
+	background: var(--color-white)
+
+.text
+	max-width: 720px
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	align-items: flex-start
+	line-height: 1.3
+	gap: 32px
+	margin-top: 60px
