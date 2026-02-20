@@ -1,7 +1,9 @@
 'use client';
 
 import 'react-prokrutchik/styles.css';
-import { Scroller } from 'react-prokrutchik';
+import dynamic from 'next/dynamic';
+
+const Scroller = dynamic(() => import('react-prokrutchik').then((mod) => mod.Scroller), { ssr: false });
 
 import Image from 'next/image';
 import styles from './Conditions.module.sass';
