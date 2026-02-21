@@ -1,0 +1,95 @@
+.contacts
+	padding: 110px 0 70px
+
+.list
+	counter-reset: items
+
+.item
+	padding: 70px 0
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	counter-increment: items
+	border-bottom: 1px solid #D9D9D9
+	&::before
+		content: counter(items, decimal-leading-zero)
+		display: block
+		color: #818181
+		font-size: 40px
+		font-family: var(--font-roadradio)
+		line-height: 0.96
+		font-weight: 300
+		width: 150px
+	&:last-child
+		border: 0
+
+.image
+	width: 580px
+	height: 340px
+	border-radius: 28px
+	object-fit: cover
+	object-position: center
+
+.content
+	margin-left: auto
+	max-width: 840px
+	width: 100%
+
+.city
+	text-transform: uppercase
+	font-size: 40px
+	font-family: var(--font-roadradio)
+	line-height: 0.96
+	font-weight: 300
+
+.info
+	margin-top: 60px
+	li
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		line-height: 1.34
+		margin-top: 20px
+		&:first-child
+			margin-top: 0
+		span
+			color: #818181
+			position: relative
+			line-height: 32px
+			&::before
+				content: ''
+				position: absolute
+				bottom: 8px
+				left: calc(100% + 10px)
+				height: 1px
+				background: #D9D9D9
+				width: 540px
+		p
+			width: 550px
+			padding-left: 10px
+			margin-left: auto
+			background: #fff
+			position: relative
+			z-index: 2
+
+.legal
+	background: #F4F4F4
+	border-radius: 30px
+	padding: 50px
+
+.legalTitle
+	font-size: 40px
+	font-weight: 300
+	line-height: 0.96
+	font-family: var(--font-roadradio)
+	padding-bottom: 40px
+	border-bottom: 3px solid #DEDEDE
+
+.legalText
+	margin-top: 30px
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	flex-direction: column
+	gap: 32px
+	line-height: 1.34

@@ -1,13 +1,21 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils/cn';
+
 import Link from 'next/link';
 import styles from './Footer.module.sass';
 import { useLangRouting } from '@/lib/i18n/useLangRouting';
 
 export default function Footer() {
 	const { href } = useLangRouting();
+
+	const raw = usePathname();
+	const pathname = raw ?? '/';
+
+	const isHome = pathname === '/' || pathname === '/en';
 	return (
-		<footer className={styles.footer}>
+		<footer className={cn(styles.footer, isHome && styles.footerHome)}>
 			<div className="container">
 				<div className={styles.main}>
 					<div className={styles.contacts}>
