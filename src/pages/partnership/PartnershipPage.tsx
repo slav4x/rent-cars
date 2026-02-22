@@ -1,5 +1,6 @@
 import Cases from './sections/Cases/Cases';
 import Partnership from './sections/Partnership/Partnership';
+import Steps from './sections/Steps/Steps';
 import Why from './sections/Why/Why';
 
 export default function PartnershipPage() {
@@ -8,6 +9,7 @@ export default function PartnershipPage() {
 			<Partnership />
 			<Cases />
 			<Why />
+			<Steps />
 		</>
 	);
 }
