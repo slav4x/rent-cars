@@ -14,6 +14,17 @@
 
 .card
 	width: 420px
+	position: relative
+	&::before
+		content: '01'
+		position: absolute
+		top: 20px
+		left: 20px
+		font-size: 20px
+		font-weight: 300
+		line-height: 0.96
+		z-index: 5
+		font-family: var(--font-roadradio)
 
 .title
 	margin-top: 30px

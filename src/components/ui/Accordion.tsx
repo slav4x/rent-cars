@@ -14,9 +14,10 @@ type Props = {
 	items: AccordionItem[];
 	allowMultiple?: boolean; // если false — открывается только один
 	defaultOpenId?: string;
+	className?: string;
 };
 
-export default function Accordion({ items, allowMultiple = false, defaultOpenId }: Props) {
+export default function Accordion({ items, allowMultiple = false, defaultOpenId, className }: Props) {
 	const [openIds, setOpenIds] = useState<Set<string>>(() => new Set(defaultOpenId ? [defaultOpenId] : []));
 
 	function toggle(id: string) {
@@ -39,7 +40,7 @@ export default function Accordion({ items, allowMultiple = false, defaultOpenId 
 	}
 
 	return (
-		<div className={styles.list}>
+		<div className={cn(styles.list, className)}>
 			{items.map((item) => (
 				<AccordionRow key={item.id} item={item} isOpen={openIds.has(item.id)} onToggle={() => toggle(item.id)} />
 			))}
