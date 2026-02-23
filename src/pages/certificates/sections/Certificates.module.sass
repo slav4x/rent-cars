@@ -1,0 +1,86 @@
+.certificates
+	padding: 90px 0
+	:global(.title)
+		text-align: center
+
+.carousel
+	max-width: 580px
+	width: 100%
+	margin: 0 auto
+	:global(.splide__track)
+		overflow: initial
+	:global(.splide__slide img)
+		display: block
+		width: 100%
+		border-radius: 16px
+		transition: var(--transition-ms)
+		transform: scale(.6)
+		transform-origin: center center
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		opacity: 0.77
+	:global(.splide__slide.is-active img)
+		transform: scale(1)
+		box-shadow: 0px 30px 48px rgba(101, 110, 119, 0.42)
+		opacity: 1
+	:global(.splide__arrow)
+		width: 90px
+		height: 90px
+		border-radius: 100%
+		opacity: 1 !important
+		svg
+			display: none
+	:global(.splide__arrow--next)
+		right: -120px
+		background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.63282 13.7216L7.71985 7.67216C8.09338 7.30094 8.09338 6.69907 7.71985 6.32784L1.63282 0.278417C1.25929 -0.0928054 0.653681 -0.0928055 0.28015 0.278417C-0.0933803 0.64964 -0.0933804 1.25151 0.28015 1.62273L5.69084 7L0.280148 12.3773C-0.0933824 12.7485 -0.0933825 13.3504 0.280148 13.7216C0.653678 14.0928 1.25929 14.0928 1.63282 13.7216Z' fill='%23423526'/%3E%3C/svg%3E%0A") no-repeat center, linear-gradient(90deg, #D6B58F 0%, #DEBB93 100%)
+	:global(.splide__arrow--prev)
+		left: -120px
+		background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.36718 0.278417L0.280148 6.32784C-0.0933825 6.69906 -0.0933825 7.30094 0.280148 7.67216L6.36718 13.7216C6.74071 14.0928 7.34632 14.0928 7.71985 13.7216C8.09338 13.3504 8.09338 12.7485 7.71985 12.3773L2.30916 7L7.71985 1.62273C8.09338 1.25151 8.09338 0.64964 7.71985 0.278417C7.34632 -0.0928057 6.74071 -0.0928057 6.36718 0.278417Z' fill='%23423526'/%3E%3C/svg%3E%0A") no-repeat center, linear-gradient(90deg, #D6B58F 0%, #DEBB93 100%)
+
+.wrapper
+	padding: 50px 0 60px
+	overflow: hidden
+
+.subtitle
+	text-align: center
+	font-size: 40px
+	line-height: 1
+	font-weight: 300
+	font-family: var(--font-roadradio)
+
+.sum
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	margin: 24px 0
+	gap: 12px
+	li
+		font-size: 34px
+		line-height: 32px
+		letter-spacing: -0.04em
+		padding: 15px 25px
+		border: 1px solid rgba(0,0,0,.1)
+		border-radius: 16px
+		font-weight: 300
+		font-family: var(--font-roadradio)
+		text-align: center
+		cursor: pointer
+		transition: var(--transition-ms)
+		&:hover
+			background: rgba(0,0,0,.05)
+	:global(.active)
+		background: #000 !important
+		color: #D7B690
+		border-color: #000
+
+.btn
+	max-width: 580px
+	width: 100%
+	height: 80px
+	background: var(--color-accent)
+	border-radius: 14px
+	font-weight: 600
+	color: var(--color-white)
+	margin: 40px auto 0
+	padding: 0
+	display: block
