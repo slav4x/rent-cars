@@ -1,6 +1,7 @@
 .steps
 	padding-top: 120px
 	overflow: hidden
+	counter-reset: items
 
 .list
 	margin-top: 30px
@@ -15,8 +16,9 @@
 .card
 	width: 420px
 	position: relative
+	counter-increment: items
 	&::before
-		content: '01'
+		content: counter(items, decimal-leading-zero)
 		position: absolute
 		top: 20px
 		left: 20px
@@ -39,3 +41,6 @@
 	margin-top: 5px
 	font-size: 20px
 	line-height: 1.2
+
+.image
+	pointer-events: none
