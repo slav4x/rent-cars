@@ -1,14 +1,14 @@
 .footer
 	background: var(--color-accent)
 	color: var(--color-white)
-	border-top-left-radius: 70px
-	border-top-right-radius: 70px
+	border-top-left-radius: var(--border-radius)
+	border-top-right-radius: var(--border-radius)
 	position: relative
 	z-index: 10
 	padding: 60px 0
 
 .footerHome
-	margin-top: -70px
+	margin-top: calc(var(--border-radius) * -1)
 
 .main
 	display: flex
@@ -107,3 +107,142 @@
 	p
 		font-size: 20px
 		line-height: 1.34
+
+@media (max-width: 1600px)
+	.footer
+		padding: 50px 0
+
+	.nav
+		gap: 14px
+		max-width: 640px
+		li
+			width: calc(100% / 2 - 7px)
+		a
+			font-size: 30px
+
+	.contacts
+		gap: 16px
+
+	.socials
+		gap: 10px
+		a
+			width: 42px
+			height: 42px
+		svg
+			display: block
+			transform: scale(0.8)
+
+	.bottom
+		border-radius: 14px
+		padding: 24px
+		padding-right: 0
+
+	.logo
+		img
+			width: 180px
+
+	.info
+		font-size: 16px
+		margin-left: 16px
+
+	.right
+		gap: 14px
+		max-width: 640px
+
+	.links
+		width: calc(100% / 2 - 7px)
+		gap: 7px
+		font-size: 16px
+
+	.dev
+		gap: 12px
+		p
+			font-size: 16px
+		svg
+			display: block
+			width: 72px
+			height: 19px
+
+@media (max-width: 1200px)
+	.nav
+		max-width: 580px
+		a
+			font-size: 28px
+
+	.bottom
+		border-radius: 14px
+		padding: 24px
+		padding-right: 0
+
+	.logo
+		width: 100%
+		margin-bottom: 16px
+		img
+			width: 160px
+
+	.info
+		margin-left: 0
+
+	.right
+		max-width: 580px
+
+@media (max-width: 1024px)
+	.nav
+		width: 50%
+		max-width: initial
+		flex-direction: column
+		align-items: flex-start
+		gap: 16px
+		order: -1
+		li
+			width: auto
+
+	.contacts
+		width: 50%
+
+	.logo
+		width: 50%
+
+	.info
+		width: 50%
+
+	.bottom
+		padding: 32px 24px
+		margin-top: 50px
+
+	.right
+		max-width: 100%
+		gap: 0
+
+	.links
+		width: 50%
+	.dev
+		width: 50%
+
+@media (max-width: 576px)
+	.nav
+		width: 100%
+
+	.contacts
+		width: 100%
+		margin-top: 30px
+
+	.logo
+		width: 100%
+
+	.info
+		width: 100%
+
+	.bottom
+		padding: 32px 24px
+		margin-top: 50px
+		gap: 12px
+
+	.right
+		max-width: 100%
+		gap: 12px
+
+	.links
+		width: 100%
+	.dev
+		width: 100%

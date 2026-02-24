@@ -38,6 +38,15 @@ export default function Hero() {
 				className={styles.cars}
 			/>
 			<Image
+				src="/img/hero-cars-mob.png"
+				alt=""
+				width={962}
+				height={460}
+				quality={100}
+				unoptimized={true}
+				className={styles.carsMob}
+			/>
+			<Image
 				src="/img/hero-background.jpg"
 				alt=""
 				width={3000}

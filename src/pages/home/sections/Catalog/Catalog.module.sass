@@ -1,8 +1,8 @@
 .catalog
 	background: var(--color-white)
-	margin-top: -70px
-	border-top-left-radius: 70px
-	border-top-right-radius: 70px
+	margin-top: calc(var(--border-radius) * -1)
+	border-top-left-radius: var(--border-radius)
+	border-top-right-radius: var(--border-radius)
 	position: relative
 	z-index: 10
 	padding: 90px 0 140px
@@ -51,6 +51,7 @@
 	padding: 22px
 	text-align: center
 	color: #A39079
+	font-weight: 600
 	background: var(--color-accent-light)
 	border-radius: 14px
 	cursor: pointer
@@ -58,3 +59,97 @@
 	&:hover
 		background: var(--color-accent)
 		color: var(--color-white)
+
+@media (max-width: 1600px)
+	.catalog
+		padding: 70px 0 100px
+		:global(.title)
+			img
+				margin: 0 26px
+				width: 42px
+
+	.categories
+		margin-top: 24px
+		gap: 12px
+
+	.categoriesItem
+		line-height: 22px
+		padding: 16px
+		border-radius: 10px
+
+	.grid
+		margin-top: 40px
+
+	.more
+		font-size: 18px
+		line-height: 22px
+		padding: 18px
+		border-radius: 10px
+
+@media (max-width: 1200px)
+	.catalog
+		padding: 50px 0 70px
+		:global(.title)
+			img
+				margin: 0 22px
+				width: 30px
+
+	.categories
+		margin-top: 16px
+		gap: 10px
+
+	.categoriesItem
+		line-height: 18px
+		padding: 10px
+		border-radius: 8px
+		font-size: 14px
+		border-width: 1px
+
+	.grid
+		margin-top: 30px
+
+	.more
+		font-size: 16px
+		padding: 12px
+		border-radius: 8px
+
+@media (max-width: 1024px)
+	.catalog
+		padding: 60px 0
+
+	.categories
+		margin-top: 24px
+		gap: 12px
+		grid-template-columns: repeat(4, 1fr)
+
+	.grid
+		gap: 10px
+		grid-template-columns: repeat(2, 1fr)
+
+	.more
+		padding: 14px
+		margin-top: 20px
+
+@media (max-width: 576px)
+	.catalog
+		padding: 40px 0 60px
+		:global(.title)
+			img
+				display: none
+
+	.categories
+		background: #F2F2F2
+		border-radius: 14px
+		padding: 10px
+		display: flex
+		overflow: auto
+		width: 100%
+
+	.categoriesItem
+		min-width: 122px
+		padding: 14px 0
+		line-height: 10px
+
+	.grid
+		margin-top: 20px
+		grid-template-columns: repeat(1, 1fr)

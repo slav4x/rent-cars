@@ -9,6 +9,7 @@
 
 .content
 	max-width: 760px
+	flex: 1
 
 .text
 	margin-top: 10px
@@ -31,3 +32,71 @@
 	top: -140px
 	left: -690px
 	z-index: -1
+	max-width: initial
+
+@media (max-width: 1600px)
+	.faq
+		padding: 100px 0 180px
+
+	.content
+		max-width: 560px
+
+	.text
+		margin-top: 8px
+
+	.btn
+		max-width: 320px
+		line-height: 24px
+		border-radius: 10px
+		padding: 16px
+		margin-top: 30px
+
+	.car
+		width: 1380px
+		height: auto
+		left: -500px
+		top: -150px
+
+@media (max-width: 1200px)
+	.faq
+		padding: 70px 0 120px
+
+	.content
+		max-width: 440px
+
+	.text
+		font-size: 14px
+
+	.btn
+		max-width: 300px
+		line-height: 22px
+		border-radius: 10px
+		padding: 12px
+		margin-top: 24px
+
+	.car
+		width: 1140px
+		height: auto
+		left: -500px
+		top: -130px
+
+@media (max-width: 1024px)
+	.faq
+		padding: 70px 0 200px
+	.content
+		width: 100%
+		max-width: 100%
+		flex: initial
+		margin-bottom: 20px
+
+	.car
+		top: initial
+		bottom: -420px
+		right: -90px
+		left: initial
+
+@media (max-width: 576px)
+	.car
+		width: 580px
+		right: -70px
+		bottom: -240px

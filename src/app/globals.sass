@@ -7,6 +7,8 @@
 
 	--transition-ms: 200ms
 
+	--border-radius: 70px
+
 body
 	font-family: var(--font-manrope), sans-serif
 	font-weight: 500
@@ -82,3 +84,45 @@ input, textarea
 	font-weight: 300
 	line-height: 0.96
 	font-family: var(--font-roadradio)
+
+@media (max-width: 1600px)
+	:root
+		--border-radius: 50px
+
+	body
+		font-size: 18px
+
+	.container
+		max-width: 1440px
+
+	.title
+		font-size: 60px
+
+@media (max-width: 1200px)
+	:root
+		--border-radius: 30px
+
+	body
+		font-size: 16px
+
+	.container
+		max-width: 1024px
+		padding: 0 40px
+
+	.title
+		font-size: 44px
+
+@media (max-width: 1024px)
+	.container
+		max-width: 768px
+		padding: 0 30px
+
+	.title
+		font-size: 44px
+
+@media (max-width: 576px)
+	.container
+		padding: 0 10px
+
+	.title
+		font-size: 36px

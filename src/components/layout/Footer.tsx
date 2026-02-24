@@ -72,9 +72,11 @@ export default function Footer() {
 					</ul>
 				</div>
 				<div className={styles.bottom}>
-					<Link href={href('/')} className={styles.logo}>
-						<img src="img/svg/logo.svg" alt="VsemProkat" />
-					</Link>
+					<div className={styles.logo}>
+						<Link href={href('/')}>
+							<img src="img/svg/logo.svg" alt="VsemProkat" />
+						</Link>
+					</div>
 					<div className={styles.info}>
 						ИНН: 471207245325
 						<br />

@@ -57,3 +57,45 @@
 	background: #E9E9E9
 	&::before, &::after
 		background: #2D2D2D
+
+@media (max-width: 1600px)
+	.list
+		max-width: 550px
+	.itemHead
+		padding: 20px 0
+	.itemText
+		padding-bottom: 20px
+		font-size: 16px
+	.itemIcon
+		width: 48px
+		height: 48px
+		&::before
+			width: 15px
+			height: 1px
+		&::after
+			width: 1px
+			height: 15px
+
+@media (max-width: 1200px)
+	.list
+		max-width: 390px
+	.itemHead
+		padding: 16px 0
+	.itemText
+		padding-bottom: 16px
+		font-size: 14px
+	.itemIcon
+		width: 36px
+		height: 36px
+		&::before
+			width: 9px
+		&::after
+			height: 9px
+
+@media (max-width: 1024px)
+	.list
+		max-width: 100%
+	.itemTitle
+		max-width: calc(100% - 60px)
+	.itemText
+		max-width: calc(100% - 60px)

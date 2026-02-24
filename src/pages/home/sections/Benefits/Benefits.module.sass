@@ -1,8 +1,8 @@
 .benefits
 	background: var(--color-accent)
 	padding: 60px 0 210px
-	border-top-left-radius: 70px
-	border-top-right-radius: 70px
+	border-top-left-radius: var(--border-radius)
+	border-top-right-radius: var(--border-radius)
 	:global(.title)
 		color: var(--color-white)
 
@@ -65,3 +65,131 @@
 	left: 0
 	right: 0
 	margin: 0 auto
+
+@media (max-width: 1600px)
+	.benefits
+		padding: 50px 0 150px
+
+	.grid
+		margin-top: 20px
+
+	.item
+		border-radius: 18px
+		padding: 26px
+
+	.text
+		font-size: 20px
+
+	.big
+		height: 440px
+
+	.small
+		height: 210px
+
+	.image01
+		width: 340px
+		bottom: 28px
+		height: auto
+
+	.image02
+		bottom: 14px
+		left: 16px
+		width: auto
+		height: 86px
+
+	.image03
+		bottom: 26px
+		left: 28px
+		height: 64px
+		width: auto
+
+	.image04
+		width: 380px
+		height: auto
+
+@media (max-width: 1200px)
+	.benefits
+		padding: 30px 0 100px
+
+	.grid
+		margin-top: 14px
+		gap: 20px
+
+	.item
+		border-radius: 13px
+		padding: 20px
+
+	.text
+		font-size: 14px
+
+	.big
+		height: 320px
+
+	.small
+		height: 150px
+
+	.image01
+		width: 240px
+		bottom: 20px
+
+	.image02
+		bottom: 10px
+		left: 12px
+		height: 62px
+
+	.image03
+		bottom: 18px
+		left: 20px
+		height: 46px
+
+	.image04
+		width: 280px
+
+@media (max-width: 1024px)
+	.grid
+		gap: 10px
+		display: flex
+		flex-wrap: wrap
+
+	.item
+		border-radius: 13px
+		padding: 20px
+
+	.col
+		width: calc(100% / 2 - 5px)
+		gap: 10px
+		flex-direction: row
+		&:nth-child(2)
+			width: 100%
+			order: 2
+
+	.text
+		font-size: 16px
+
+	.big
+		height: 270px
+
+	.small
+		height: 270px
+		width: calc(100% / 2 - 5px)
+
+@media (max-width: 576px)
+	.benefits
+		padding: 30px 0 70px
+
+	.col
+		width: 100%
+		gap: 14px
+		flex-direction: column
+		&:nth-child(2)
+			order: initial
+
+	.big
+		height: 240px
+
+	.small
+		height: 170px
+		width: 100%
+
+	.image04
+		bottom: -30px
