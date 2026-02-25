@@ -2,7 +2,8 @@
 
 import { useRef, useEffect } from 'react';
 
-import { Splide, SplideSlide, SplideTrack, Splide as SplideInstance } from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import type { Splide as SplideCore } from '@splidejs/splide';
 import '@splidejs/react-splide/css';
 
 import styles from './Single.module.sass';
@@ -26,14 +27,17 @@ const slides: Slide[] = [
 ];
 
 export default function Single() {
-	const mainRef = useRef<SplideInstance | null>(null);
-	const thumbsRef = useRef<SplideInstance | null>(null);
+	const mainRef = useRef<InstanceType<typeof Splide> | null>(null);
+	const thumbsRef = useRef<InstanceType<typeof Splide> | null>(null);
 
 	useEffect(() => {
-		if (mainRef.current && thumbsRef.current) {
-			mainRef.current.sync(thumbsRef.current.splide);
+		if (mainRef.current?.splide && thumbsRef.current?.splide) {
+			const main = mainRef.current.splide as SplideCore;
+			const thumbs = thumbsRef.current.splide as SplideCore;
+			main.sync(thumbs);
 		}
 	}, []);
+
 	return (
 		<section className={styles.single}>
 			<div className="container">
