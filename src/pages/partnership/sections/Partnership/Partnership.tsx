@@ -7,7 +7,7 @@ export default function Partnership() {
 	return (
 		<section className={styles.partnership}>
 			<div className="container">
-				<h2 className={styles.title}>есть автомобиль? Зарабатывайте от 150.000р</h2>
+				<h2 className={styles.title}>есть автомобиль? Зарабатывайте от 150.000р</h2>
 				<div className={styles.description}>
 					Предлагаем выгодные условия сотрудничества, благодаря которым вы сможете зарабатывать на своем автомобиле, не
 					отвлекаясь от повседневных дел и работы.

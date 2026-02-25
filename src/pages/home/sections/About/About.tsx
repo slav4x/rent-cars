@@ -4,7 +4,7 @@ import styles from './About.module.sass';
 
 export default function About() {
 	return (
-		<section className={styles.about}>
+		<section className={styles.about} id="about">
 			<video playsInline autoPlay loop muted>
 				<source src="https://vsem-prokat.ru/wp-content/uploads/2023/08/video.mp4" type="video/mp4" />
 			</video>

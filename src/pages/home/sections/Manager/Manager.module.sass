@@ -175,6 +175,8 @@
 		transform: translateX(-50%)
 
 @media (max-width: 768px)
+	.main
+		background: var(--color-accent) url(/img/manager-bg-2.png) no-repeat top right
 	.user
 		padding: 16px
 		padding-top: 0
@@ -188,3 +190,11 @@
 		padding-top: 12px
 		img
 			top: -19px
+
+@media (max-width: 576px)
+	.car
+		width: calc(100% + 40px)
+		max-width: initial
+
+	.main
+		background-size: 420px

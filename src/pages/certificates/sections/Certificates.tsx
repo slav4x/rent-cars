@@ -55,7 +55,12 @@ export default function Certificates() {
 							updateOnMove: true,
 							pagination: false,
 							throttle: 300,
-							gap: '60px'
+							gap: '60px',
+							breakpoints: {
+								'1600': {
+									gap: '10px'
+								}
+							}
 						}}
 						onMounted={(splide: SplideCore) => {
 							syncTypeByIndex(splide.index);

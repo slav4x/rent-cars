@@ -7,6 +7,7 @@ import { useLangRouting } from '@/lib/i18n/useLangRouting';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { cn } from '@/lib/utils/cn';
+import Image from 'next/image';
 
 export default function Header() {
 	const t = useT();
@@ -47,9 +48,25 @@ export default function Header() {
 					<span>заказать звонок</span>
 				</div>
 
-				<Link href={switchHref} className={styles.lang}>
-					{isEn ? 'RU' : 'EN'}
-				</Link>
+				<div className={styles.lang}>
+					<div className={cn(styles.langCurrent, open && styles.langCurrentBlack)}>
+						<Image src={`img/lang-${isEn ? 'en' : 'ru'}.png`} alt="" width={42} height={28} unoptimized={true} />
+					</div>
+					<ul className={styles.langList}>
+						<li>
+							<Link href={isEn ? switchHref : pathname}>
+								<Image src={`img/lang-ru.png`} alt="" width={42} height={28} unoptimized={true} />
+								Русский
+							</Link>
+						</li>
+						<li>
+							<Link href={!isEn ? switchHref : pathname}>
+								<Image src={`img/lang-en.png`} alt="" width={42} height={28} unoptimized={true} />
+								English
+							</Link>
+						</li>
+					</ul>
+				</div>
 
 				<Link href={href('/auth/login')} className={cn(styles.login, open && styles.loginAccent)}></Link>
 			</div>

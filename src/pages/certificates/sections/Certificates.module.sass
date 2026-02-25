@@ -1,5 +1,6 @@
 .certificates
 	padding: 90px 0
+	overflow: hidden
 	:global(.title)
 		text-align: center
 
@@ -38,7 +39,6 @@
 
 .wrapper
 	padding: 50px 0 60px
-	overflow: hidden
 
 .subtitle
 	text-align: center
@@ -84,3 +84,73 @@
 	margin: 40px auto 0
 	padding: 0
 	display: block
+
+@media (max-width: 1600px)
+	.certificates
+		padding: 70px 0
+
+	.carousel
+		max-width: 480px
+		:global(.splide__arrow)
+			width: 70px
+			height: 70px
+		:global(.splide__arrow--next)
+			right: -80px
+		:global(.splide__arrow--prev)
+			left: -80px
+
+	.wrapper
+		padding-top: 40px
+
+	.subtitle
+		font-size: 32px
+
+	.sum
+		margin: 16px 0
+		gap: 10px
+		li
+			font-size: 28px
+			line-height: 28px
+			padding: 12px 20px
+			border-radius: 12px
+
+	.btn
+		max-width: 420px
+		height: 60px
+		border-radius: 12px
+
+@media (max-width: 576px)
+	.certificates
+		padding: 60px 0
+
+	.carousel
+		max-width: 360px
+		:global(.splide__arrow)
+			width: 50px
+			height: 50px
+		:global(.splide__arrow--next)
+			right: -40px
+		:global(.splide__arrow--prev)
+			left: -40px
+
+	.wrapper
+		padding-top: 40px
+
+	.subtitle
+		font-size: 26px
+
+	.sum
+		margin: 16px 0
+		gap: 10px
+		li
+			flex: 1
+			min-width: calc(100% / 2 - 5px)
+			font-size: 22px
+			line-height: 28px
+			padding: 12px 20px
+			border-radius: 12px
+
+	.btn
+		max-width: 420px
+		height: 60px
+		border-radius: 12px

@@ -13,7 +13,7 @@ export default function Conditions() {
 	return (
 		<section className={styles.conditions} id="rules">
 			<div className="container">
-				<h2 className="title">Условия и процесс аренды</h2>
+				<h2 className="title">Условия и процесс аренды</h2>
 				<ul className={styles.list}>
 					<li className={styles.listItem}>
 						<Image src="img/conditions-01.png" alt="" width={114} height={86} unoptimized={true} quality={100} />

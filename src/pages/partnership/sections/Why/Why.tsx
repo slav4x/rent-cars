@@ -33,7 +33,7 @@ export default function Why() {
 	return (
 		<section className={styles.why}>
 			<div className="container">
-				<h2 className="title">почему именно мы?</h2>
+				<h2 className="title">почему именно мы?</h2>
 				<div className={styles.grid}>
 					{items.map((item) => {
 						return (

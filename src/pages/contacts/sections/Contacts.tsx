@@ -1,11 +1,15 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
+
 import styles from './Contacts.module.sass';
 
 import { contacts } from '@/data/mocks/contacts';
+import { cn } from '@/lib/utils/cn';
 
 export default function Contacts() {
+	const [open, setOpen] = useState(false);
 	return (
 		<section className={styles.contacts}>
 			<div className="container">
@@ -42,9 +46,9 @@ export default function Contacts() {
 						</div>
 					))}
 				</div>
-				<div className={styles.legal}>
-					<div className={styles.legalTitle}>юридическая информация</div>
-					<div className={styles.legalText}>
+				<div className={styles.legal} onClick={() => setOpen((prev) => !prev)}>
+					<div className={cn(styles.legalTitle, open && styles.legalTitleOpen)}>юридическая информация</div>
+					<div className={cn(styles.legalText, open && styles.legalTextOpen)}>
 						<p>Название: ТЭММО РОКСАНА НИКОЛАЕВНА (ИП)</p>
 						<p>
 							ИНН: 471207245325

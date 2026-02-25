@@ -35,5 +35,32 @@ export const casesMock: CaseItem[] = [
 		extraCosts3y: 950000,
 		monthlyIncome: 320000,
 		yearlyProfit: 1800000
+	},
+	{
+		id: 'pp-4',
+		title: 'Range Rover 1',
+		image: '/img/car-item.jpg',
+		purchasePrice: 7200000,
+		extraCosts3y: 950000,
+		monthlyIncome: 320000,
+		yearlyProfit: 1800000
+	},
+	{
+		id: 'pp-5',
+		title: 'Range Rover 2',
+		image: '/img/car-item.jpg',
+		purchasePrice: 7200000,
+		extraCosts3y: 950000,
+		monthlyIncome: 320000,
+		yearlyProfit: 1800000
+	},
+	{
+		id: 'pp-6',
+		title: 'Range Rover 3',
+		image: '/img/car-item.jpg',
+		purchasePrice: 7200000,
+		extraCosts3y: 950000,
+		monthlyIncome: 320000,
+		yearlyProfit: 1800000
 	}
 ];

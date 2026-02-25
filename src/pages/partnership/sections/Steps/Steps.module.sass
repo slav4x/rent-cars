@@ -44,3 +44,69 @@
 
 .image
 	pointer-events: none
+	height: auto
+
+@media (max-width: 1600px)
+	.steps
+		padding-top: 80px
+
+	.list
+		margin-top: 22px
+		:global(.scroller-content)
+			gap: 28px
+
+	.card
+		width: 310px
+		&::before
+			top: 14px
+			left: 14px
+			font-size: 14px
+
+	.title
+		margin-top: 22px
+		padding-right: 0
+		font-size: 30px
+
+	.text
+		margin-top: 3px
+		font-size: 16px
+
+@media (max-width: 1200px)
+	.steps
+		padding-top: 60px
+
+	.list
+		margin-top: 22px
+		:global(.scroller-content)
+			gap: 20px
+
+	.card
+		width: 380px
+		&::before
+			top: 14px
+			left: 14px
+			font-size: 14px
+
+	.title
+		font-size: 28px
+
+	.text
+		margin-top: 8px
+
+	.image
+		height: 280px
+		object-fit: cover
+		object-position: center
+		border-radius: 10px
+
+@media (max-width: 1024px)
+	.steps
+		padding-top: 60px
+
+	.list
+		margin-top: 16px
+		:global(.scroller-content)
+			gap: 16px
+
+	.card
+		width: 340px

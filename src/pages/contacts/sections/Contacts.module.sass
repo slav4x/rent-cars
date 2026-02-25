@@ -76,6 +76,7 @@
 	background: #F4F4F4
 	border-radius: 30px
 	padding: 50px
+	cursor: pointer
 
 .legalTitle
 	font-size: 40px
@@ -84,12 +85,174 @@
 	font-family: var(--font-roadradio)
 	padding-bottom: 40px
 	border-bottom: 3px solid #DEDEDE
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+	&::after
+		content: ''
+		display: block
+		width: 66px
+		height: 66px
+		border-radius: 10px
+		background: #fff url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.8737 0.5C8.48539 -0.166667 7.51461 -0.166668 7.1263 0.499999L0.136667 12.5C-0.251647 13.1667 0.233744 14 1.01037 14L14.9896 14C15.7663 14 16.2516 13.1667 15.8633 12.5L8.8737 0.5Z' fill='%23CCCCCC'/%3E%3C/svg%3E%0A") no-repeat center
+		transition: calc(var(--transition-ms) * 3)
+
+.legalTitleOpen::after
+	transform: rotate(180deg)
 
 .legalText
 	margin-top: 30px
 	display: flex
-	flex-wrap: wrap
+	flex-wrap: nowrap
 	align-items: flex-start
 	flex-direction: column
 	gap: 32px
 	line-height: 1.34
+	max-height: 0
+	overflow: hidden
+	transition: calc(var(--transition-ms) * 2)
+
+.legalTextOpen
+	max-height: 1000px
+
+@media (max-width: 1600px)
+	.contacts
+		padding: 80px 0 60px
+
+	.item
+		padding: 50px 0
+		&::before
+			font-size: 32px
+			width: 100px
+	.image
+		width: 420px
+		height: 280px
+		border-radius: 20px
+
+	.content
+		margin-left: auto
+		max-width: 540px
+		width: 100%
+
+	.city
+		font-size: 32px
+
+	.info
+		margin-top: 40px
+		li
+			margin-top: 14px
+			span
+				&::before
+					width: 400px
+			p
+				width: 400px
+
+	.legal
+		border-radius: 20px
+		padding: 40px
+
+	.legalTitle
+		font-size: 32px
+		padding-bottom: 30px
+
+	.legalText
+		margin-top: 30px
+		gap: 24px
+
+@media (max-width: 1200px)
+	.contacts
+		padding: 60px 0
+
+	.item
+		padding: 40px 0
+		&::before
+			font-size: 24px
+			width: 60px
+	.image
+		width: 360px
+		height: 220px
+		border-radius: 12px
+
+	.content
+		max-width: 500px
+
+	.city
+		font-size: 28px
+
+	.info
+		margin-top: 30px
+		li
+			margin-top: 12px
+			span
+				&::before
+					width: 380px
+			p
+				width: 380px
+				line-height: 32px
+
+	.legal
+		border-radius: 20px
+		padding: 30px
+
+	.legalTitle
+		font-size: 28px
+		padding-bottom: 20px
+
+	.legalText
+		margin-top: 20px
+		gap: 24px
+
+@media (max-width: 1024px)
+	.contacts
+		padding: 50px 0
+
+	.item
+		padding: 30px 0
+		&::before
+			display: none
+	.image
+		width: 100%
+		height: 320px
+
+	.content
+		margin-left: 0
+		width: 100%
+		max-width: 100%
+		margin-top: 20px
+
+	.info
+		margin-top: 12px
+
+@media (max-width: 576px)
+	.info
+		li
+			span
+				width: 100%
+				line-height: 24px
+				&::before
+					display: none
+			p
+				width: 100%
+				max-width: 100%
+				padding: 0
+				margin-left: 0
+				line-height: 24px
+				margin-top: 4px
+
+	.image
+		height: 260px
+
+	.legal
+		border-radius: 10px
+		padding: 16px
+
+	.legalTitle
+		font-size: 24px
+		padding-bottom: 16px
+
+	.legalText
+		margin-top: 16px
+		gap: 12px
+		font-size: 14px

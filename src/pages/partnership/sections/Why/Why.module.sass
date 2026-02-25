@@ -17,7 +17,8 @@
 	flex-direction: column
 	align-items: flex-start
 	justify-content: space-between
-	&:first-child
+	transition: var(--transition-ms)
+	&:hover
 		background: var(--color-accent)
 		color: var(--color-white)
 
@@ -33,3 +34,51 @@
 	max-width: 480px
 	font-size: 20px
 	line-height: 1.2
+
+@media (max-width: 1600px)
+	.why
+		padding-top: 80px
+
+	.grid
+		margin-top: 20px
+
+	.item
+		border-radius: 12px
+		padding: 20px
+		height: 240px
+
+	.title
+		font-size: 30px
+		max-width: 210px
+
+	.text
+		font-size: 16px
+
+@media (max-width: 1200px)
+	.why
+		padding-top: 60px
+
+	.grid
+		margin-top: 16px
+		gap: 20px
+		grid-template-columns: repeat(2, 1fr)
+
+	.item
+		border-radius: 12px
+		padding: 20px
+		height: 220px
+
+	.title
+		font-size: 28px
+		max-width: 100%
+
+@media (max-width: 1024px)
+	.grid
+		gap: 16px
+
+@media (max-width: 576px)
+	.grid
+		grid-template-columns: repeat(1, 1fr)
+
+	.item
+		height: 180px
