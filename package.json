@@ -10,6 +10,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@next/bundle-analyzer": "^16.1.6",
 		"@splidejs/react-splide": "^0.7.12",
 		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
 		"modern-normalize": "^3.0.1",
