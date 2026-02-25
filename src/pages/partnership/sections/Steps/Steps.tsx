@@ -25,7 +25,7 @@ export default function Steps() {
 					>
 						<div className={styles.card}>
 							<Image
-								src="img/steps-01.jpg"
+								src="/img/steps-01.jpg"
 								alt=""
 								width={420}
 								height={490}
@@ -37,7 +37,7 @@ export default function Steps() {
 						</div>
 						<div className={styles.card}>
 							<Image
-								src="img/steps-02.jpg"
+								src="/img/steps-02.jpg"
 								alt=""
 								width={420}
 								height={490}
@@ -49,7 +49,7 @@ export default function Steps() {
 						</div>
 						<div className={styles.card}>
 							<Image
-								src="img/steps-03.jpg"
+								src="/img/steps-03.jpg"
 								alt=""
 								width={420}
 								height={490}
@@ -63,7 +63,7 @@ export default function Steps() {
 						</div>
 						<div className={styles.card}>
 							<Image
-								src="img/steps-04.jpg"
+								src="/img/steps-04.jpg"
 								alt=""
 								width={420}
 								height={490}
@@ -77,7 +77,7 @@ export default function Steps() {
 						</div>
 						<div className={styles.card}>
 							<Image
-								src="img/steps-05.jpg"
+								src="/img/steps-05.jpg"
 								alt=""
 								width={420}
 								height={490}
@@ -91,7 +91,7 @@ export default function Steps() {
 						</div>
 						<div className={styles.card}>
 							<Image
-								src="img/steps-06.jpg"
+								src="/img/steps-06.jpg"
 								alt=""
 								width={420}
 								height={490}

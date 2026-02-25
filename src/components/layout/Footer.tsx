@@ -78,7 +78,7 @@ export default function Footer() {
 				<div className={styles.bottom}>
 					<div className={styles.logo}>
 						<Link href={href('/')}>
-							<img src="img/svg/logo.svg" alt="VsemProkat" />
+							<img src="/img/svg/logo.svg" alt="VsemProkat" />
 						</Link>
 					</div>
 					<div className={styles.info}>

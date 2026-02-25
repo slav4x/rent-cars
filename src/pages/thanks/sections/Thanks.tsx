@@ -21,7 +21,7 @@ export default function Thanks() {
 					</Link>
 				</div>
 			</div>
-			<Image src="img/thanks.png" alt="" width={1260} height={1356} unoptimized={true} className={styles.image} />
+			<Image src="/img/thanks.png" alt="" width={1260} height={1356} unoptimized={true} className={styles.image} />
 		</section>
 	);
 }

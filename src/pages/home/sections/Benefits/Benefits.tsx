@@ -17,7 +17,7 @@ export default function Benefits() {
 								<br /> и максимальная комплектация
 							</div>
 							<Image
-								src="img/benefits-01.png"
+								src="/img/benefits-01.png"
 								alt=""
 								width={482}
 								height={320}
@@ -30,7 +30,7 @@ export default function Benefits() {
 						<div className={cn(styles.item, styles.small)}>
 							<div className={styles.text}>Без ограничений по гражданству</div>
 							<Image
-								src="img/benefits-02.png"
+								src="/img/benefits-02.png"
 								alt=""
 								width={337}
 								height={114}
@@ -44,7 +44,7 @@ export default function Benefits() {
 								<br /> перед подачей
 							</div>
 							<Image
-								src="img/benefits-03.png"
+								src="/img/benefits-03.png"
 								alt=""
 								width={161}
 								height={85}
@@ -60,7 +60,7 @@ export default function Benefits() {
 								<br /> выпущенные после 2019 года
 							</div>
 							<Image
-								src="img/benefits-04.png"
+								src="/img/benefits-04.png"
 								alt=""
 								width={524}
 								height={351}

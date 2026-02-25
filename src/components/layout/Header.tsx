@@ -34,7 +34,7 @@ export default function Header() {
 					<span></span>
 				</div>
 				<Link href={href('/')} className={cn(styles.logo, open && styles.logoBlack)}>
-					<img src="img/svg/logo.svg" alt="VsemProkat" />
+					<img src="/img/svg/logo.svg" alt="VsemProkat" />
 				</Link>
 
 				<nav className={cn(styles.nav, open && styles.navHide)}>
@@ -50,18 +50,18 @@ export default function Header() {
 
 				<div className={styles.lang}>
 					<div className={cn(styles.langCurrent, open && styles.langCurrentBlack)}>
-						<Image src={`img/lang-${isEn ? 'en' : 'ru'}.png`} alt="" width={42} height={28} unoptimized={true} />
+						<Image src={`/img/lang-${isEn ? 'en' : 'ru'}.png`} alt="" width={42} height={28} unoptimized={true} />
 					</div>
 					<ul className={styles.langList}>
 						<li>
 							<Link href={isEn ? switchHref : pathname}>
-								<Image src={`img/lang-ru.png`} alt="" width={42} height={28} unoptimized={true} />
+								<Image src="/img/lang-ru.png" alt="" width={42} height={28} unoptimized={true} />
 								Русский
 							</Link>
 						</li>
 						<li>
 							<Link href={!isEn ? switchHref : pathname}>
-								<Image src={`img/lang-en.png`} alt="" width={42} height={28} unoptimized={true} />
+								<Image src="/img/lang-en.png" alt="" width={42} height={28} unoptimized={true} />
 								English
 							</Link>
 						</li>

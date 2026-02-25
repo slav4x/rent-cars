@@ -15,7 +15,7 @@ export default function Reviews() {
 				<div className={styles.head}>
 					<h2 className="title">Поездки только на проверенных автомобилях</h2>
 					<div className={styles.rating}>
-						<Image src="img/yandex.png" alt="" width={130} height={51} unoptimized={true} />
+						<Image src="/img/yandex.png" alt="" width={130} height={51} unoptimized={true} />
 						<div className={styles.ratingCount}>5,0</div>
 						<svg width="134" height="22" viewBox="0 0 134 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -68,7 +68,7 @@ export default function Reviews() {
 										<div className={styles.meta}>
 											<Image
 												className={styles.avatar}
-												src="img/avatar.png"
+												src="/img/avatar.png"
 												alt={r.author}
 												width={78}
 												height={78}

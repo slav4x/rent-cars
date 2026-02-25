@@ -20,7 +20,7 @@ export default function Page404View() {
 					</Link>
 				</div>
 			</div>
-			<Image src="img/404.png" alt="" width={1260} height={1356} unoptimized={true} className={styles.image} />
+			<Image src="/img/404.png" alt="" width={1260} height={1356} unoptimized={true} className={styles.image} />
 		</section>
 	);
 }

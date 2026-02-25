@@ -22,7 +22,7 @@ export default function Faq() {
 				</div>
 				<Accordion items={faq} />
 				<Image
-					src="img/faq-car.jpg"
+					src="/img/faq-car.jpg"
 					className={styles.car}
 					alt=""
 					width={1790}

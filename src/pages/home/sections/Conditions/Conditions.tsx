@@ -16,7 +16,7 @@ export default function Conditions() {
 				<h2 className="title">Условия и процесс аренды</h2>
 				<ul className={styles.list}>
 					<li className={styles.listItem}>
-						<Image src="img/conditions-01.png" alt="" width={114} height={86} unoptimized={true} quality={100} />
+						<Image src="/img/conditions-01.png" alt="" width={114} height={86} unoptimized={true} quality={100} />
 						<span>
 							Возраст
 							<br />
@@ -24,14 +24,14 @@ export default function Conditions() {
 						</span>
 					</li>
 					<li className={styles.listItem}>
-						<Image src="img/conditions-02.png" alt="" width={114} height={86} unoptimized={true} quality={100} />
+						<Image src="/img/conditions-02.png" alt="" width={114} height={86} unoptimized={true} quality={100} />
 						<span>
 							Стаж вождения
 							<br />- от 3х лет
 						</span>
 					</li>
 					<li className={styles.listItem}>
-						<Image src="img/conditions-03.png" alt="" width={114} height={86} unoptimized={true} quality={100} />
+						<Image src="/img/conditions-03.png" alt="" width={114} height={86} unoptimized={true} quality={100} />
 						<span>
 							Только личное
 							<br /> использование
