@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils/cn';
 
 export default function Conditions() {
 	return (
-		<section className={styles.conditions}>
+		<section className={styles.conditions} id="rules">
 			<div className="container">
 				<h2 className="title">Условия и процесс аренды</h2>
 				<ul className={styles.list}>

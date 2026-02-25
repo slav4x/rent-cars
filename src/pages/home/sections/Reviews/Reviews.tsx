@@ -10,7 +10,7 @@ import styles from './Reviews.module.sass';
 
 export default function Reviews() {
 	return (
-		<section className={styles.reviews}>
+		<section className={styles.reviews} id="reviews">
 			<div className="container">
 				<div className={styles.head}>
 					<h2 className="title">Поездки только на проверенных автомобилях</h2>

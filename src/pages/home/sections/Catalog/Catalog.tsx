@@ -12,7 +12,7 @@ export default function Catalog() {
 	const filteredCars = active === 'all' ? cars : cars.filter((car) => car.category === active);
 
 	return (
-		<section className={styles.catalog}>
+		<section className={styles.catalog} id="catalog">
 			<div className="container">
 				<h2 className="title">
 					Все машины

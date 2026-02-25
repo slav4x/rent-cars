@@ -14,6 +14,10 @@ export default function Footer() {
 	const pathname = raw ?? '/';
 
 	const isHome = pathname === '/' || pathname === '/en';
+
+	const anchor = (hash: string) => {
+		return isHome ? hash : `/${hash}`;
+	};
 	return (
 		<footer className={cn(styles.footer, isHome && styles.footerHome)}>
 			<div className="container">
@@ -52,22 +56,22 @@ export default function Footer() {
 					</div>
 					<ul className={styles.nav}>
 						<li>
-							<Link href="#">Автопарк</Link>
+							<Link href={href(anchor('#catalog'))}>Автопарк</Link>
 						</li>
 						<li>
-							<Link href="#">Сертификаты</Link>
+							<Link href={href('/certificates')}>Сертификаты</Link>
 						</li>
 						<li>
-							<Link href="#">Отзывы</Link>
+							<Link href={href(anchor('#reviews'))}>Отзывы</Link>
 						</li>
 						<li>
-							<Link href="#">Правила проката</Link>
+							<Link href={href(anchor('#rules'))}>Правила проката</Link>
 						</li>
 						<li>
-							<Link href="#">Сотрудничество</Link>
+							<Link href={href('/partnership')}>Сотрудничество</Link>
 						</li>
 						<li>
-							<Link href="#">Контакты</Link>
+							<Link href={href('/contacts')}>Контакты</Link>
 						</li>
 					</ul>
 				</div>
