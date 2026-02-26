@@ -19,7 +19,7 @@ export default function Contacts() {
 						<div key={c.id} className={styles.item}>
 							{/* <Image src={c.image} alt={c.city} width={600} height={600} className={styles.image} /> */}
 							<div className={styles.image}>
-								<iframe src={c.map} frameborder="0"></iframe>
+								<iframe src={c.map} frameBorder="0"></iframe>
 							</div>
 
 							<div className={styles.content}>
