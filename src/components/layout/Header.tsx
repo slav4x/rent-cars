@@ -25,8 +25,16 @@ export default function Header() {
 
 	const [open, setOpen] = useState(false);
 
+	const isRounded =
+		pathname === '/certificates' ||
+		pathname === '/contacts' ||
+		pathname.startsWith('/cars/') ||
+		pathname === '/en/certificates' ||
+		pathname === '/en/contacts' ||
+		pathname.startsWith('/en/cars/');
+
 	return (
-		<header className={styles.header}>
+		<header className={cn(styles.header, isRounded && styles.rounded, open && styles.opened)}>
 			<div className="container">
 				<div className={cn(styles.burger, open && styles.active)} onClick={() => setOpen((prev) => !prev)}>
 					<span></span>

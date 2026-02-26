@@ -7,6 +7,7 @@ import { reviewsMock } from '@/data/mocks/reviews';
 
 import Image from 'next/image';
 import styles from './Reviews.module.sass';
+import Link from 'next/link';
 
 export default function Reviews() {
 	return (
@@ -14,7 +15,11 @@ export default function Reviews() {
 			<div className="container">
 				<div className={styles.head}>
 					<h2 className="title">Поездки только на проверенных автомобилях</h2>
-					<div className={styles.rating}>
+					<Link
+						href="https://yandex.ru/maps/org/vsemprokat/50996303086?si=y8hcjbbqax5tykzam1q2bbnk70"
+						target="_blank"
+						className={styles.rating}
+					>
 						<Image src="/img/yandex.png" alt="" width={130} height={51} unoptimized={true} />
 						<div className={styles.ratingCount}>5,0</div>
 						<svg width="134" height="22" viewBox="0 0 134 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +44,7 @@ export default function Reviews() {
 								fill="#DFC19F"
 							/>
 						</svg>
-					</div>
+					</Link>
 				</div>
 				<Splide
 					className={styles.carousel}
@@ -88,7 +93,7 @@ export default function Reviews() {
 							<svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M15.8936 0.437519C16.4794 -0.145839 17.4289 -0.14584 18.0147 0.437519L27.5607 9.94385C28.1464 10.5272 28.1464 11.4728 27.5607 12.0562L18.0147 21.5625C17.4289 22.1458 16.4794 22.1458 15.8936 21.5625C15.3078 20.9791 15.3078 20.0335 15.8936 19.4502L22.879 12.4938H1.50001C0.671576 12.4938 -4.83393e-08 11.825 0 11C1.1921e-07 10.175 0.671576 9.50622 1.50001 9.50622H22.879L15.8936 2.54982C15.3078 1.96646 15.3078 1.02088 15.8936 0.437519Z"
-									fill="white"
+									fill="var(--arrow-color)"
 								/>
 							</svg>
 						</button>
@@ -96,7 +101,7 @@ export default function Reviews() {
 							<svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M15.8936 0.437519C16.4794 -0.145839 17.4289 -0.14584 18.0147 0.437519L27.5607 9.94385C28.1464 10.5272 28.1464 11.4728 27.5607 12.0562L18.0147 21.5625C17.4289 22.1458 16.4794 22.1458 15.8936 21.5625C15.3078 20.9791 15.3078 20.0335 15.8936 19.4502L22.879 12.4938H1.50001C0.671576 12.4938 -4.83393e-08 11.825 0 11C1.1921e-07 10.175 0.671576 9.50622 1.50001 9.50622H22.879L15.8936 2.54982C15.3078 1.96646 15.3078 1.02088 15.8936 0.437519Z"
-									fill="white"
+									fill="var(--arrow-color)"
 								/>
 							</svg>
 						</button>

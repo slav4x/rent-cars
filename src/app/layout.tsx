@@ -4,6 +4,8 @@ import './globals.sass';
 import { Manrope } from 'next/font/google';
 import localFont from 'next/font/local';
 
+import TransitionProvider from '@/components/TransitionProvider';
+
 const manrope = Manrope({
 	subsets: ['latin', 'cyrillic'],
 	weight: ['300', '400', '500', '600'],
@@ -36,7 +38,9 @@ const roadRadio = localFont({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="ru" className={`${manrope.variable} ${roadRadio.variable}`}>
-			<body>{children}</body>
+			<body>
+				<TransitionProvider>{children}</TransitionProvider>
+			</body>
 		</html>
 	);
 }

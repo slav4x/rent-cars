@@ -37,18 +37,32 @@
 		gap: 10px
 		z-index: 20
 	:global(.splide__arrow)
+		--arrow-color: var(--color-accent)
 		position: relative
 		top: 0 !important
 		right: 0 !important
 		bottom: 0 !important
 		left: 0 !important
-		display: block
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
 		width: 100px
 		height: 100px
 		transform: none !important
 		border-radius: 14px
-		background: var(--color-accent)
+		background: #EFE7DE
 		opacity: 1 !important
+		transition: var(--transition-ms)
+	:global(.splide__arrow svg)
+		display: block
+		width: auto
+		height: auto
+	:global(.splide__arrow svg path)
+		transition: var(--transition-ms)
+	:global(.splide__arrow:hover)
+		background: var(--color-accent)
+		--arrow-color: var(--color-white)
 
 .card
 	display: flex

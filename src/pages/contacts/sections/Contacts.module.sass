@@ -83,27 +83,31 @@
 	font-weight: 300
 	line-height: 0.96
 	font-family: var(--font-roadradio)
-	padding-bottom: 40px
-	border-bottom: 3px solid #DEDEDE
 	position: relative
 	display: flex
 	flex-wrap: wrap
 	align-items: center
 	justify-content: space-between
+	border-bottom: 3px solid transparent
+	transition: var(--transition-ms)
 	&::after
 		content: ''
 		display: block
 		width: 66px
 		height: 66px
 		border-radius: 10px
-		background: #fff url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.8737 0.5C8.48539 -0.166667 7.51461 -0.166668 7.1263 0.499999L0.136667 12.5C-0.251647 13.1667 0.233744 14 1.01037 14L14.9896 14C15.7663 14 16.2516 13.1667 15.8633 12.5L8.8737 0.5Z' fill='%23CCCCCC'/%3E%3C/svg%3E%0A") no-repeat center
-		transition: calc(var(--transition-ms) * 3)
+		background: #fff url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.8737 0.5C8.48539 -0.166667 7.51461 -0.166668 7.1263 0.499999L0.136667 12.5C-0.251647 13.1667 0.233744 14 1.01037 14L14.9896 14C15.7663 14 16.2516 13.1667 15.8633 12.5L8.8737 0.5Z' fill='%23CAA87F'/%3E%3C/svg%3E%0A") no-repeat center
+		transition: calc(var(--transition-ms) * 2)
+		transform: rotate(90deg)
 
-.legalTitleOpen::after
-	transform: rotate(180deg)
+.legalTitleOpen
+	padding-bottom: 40px
+	border-color: #DEDEDE
+	&::after
+		transform: rotate(180deg)
+		background: #fff url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.8737 0.5C8.48539 -0.166667 7.51461 -0.166668 7.1263 0.499999L0.136667 12.5C-0.251647 13.1667 0.233744 14 1.01037 14L14.9896 14C15.7663 14 16.2516 13.1667 15.8633 12.5L8.8737 0.5Z' fill='%23CCCCCC'/%3E%3C/svg%3E%0A") no-repeat center
 
 .legalText
-	margin-top: 30px
 	display: flex
 	flex-wrap: nowrap
 	align-items: flex-start
@@ -116,6 +120,7 @@
 
 .legalTextOpen
 	max-height: 1000px
+	margin-top: 30px
 
 @media (max-width: 1600px)
 	.contacts
@@ -155,11 +160,15 @@
 
 	.legalTitle
 		font-size: 32px
+
+	.legalTitleOpen
 		padding-bottom: 30px
 
 	.legalText
-		margin-top: 30px
 		gap: 24px
+
+	.legalTextOpen
+		margin-top: 30px
 
 @media (max-width: 1200px)
 	.contacts
@@ -198,11 +207,15 @@
 
 	.legalTitle
 		font-size: 28px
+
+	.legalTitleOpen
 		padding-bottom: 20px
 
 	.legalText
-		margin-top: 20px
 		gap: 24px
+
+	.legalTextOpen
+		margin-top: 20px
 
 @media (max-width: 1024px)
 	.contacts
@@ -250,9 +263,18 @@
 
 	.legalTitle
 		font-size: 24px
+		&::after
+			width: 48px
+			height: 48px
+			border-radius: 8px
+			background-size: 12px
+
+	.legalTitleOpen
 		padding-bottom: 16px
 
 	.legalText
-		margin-top: 16px
 		gap: 12px
 		font-size: 14px
+
+	.legalTextOpen
+		margin-top: 16px
