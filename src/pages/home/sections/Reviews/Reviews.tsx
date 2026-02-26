@@ -49,7 +49,8 @@ export default function Reviews() {
 				<Splide
 					className={styles.carousel}
 					options={{
-						type: 'loop',
+						type: 'fade',
+						rewind: true,
 						perPage: 1,
 						gap: '30px',
 						pagination: false,

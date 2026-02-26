@@ -17,7 +17,10 @@ export default function Contacts() {
 				<div className={styles.list}>
 					{contacts.map((c) => (
 						<div key={c.id} className={styles.item}>
-							<Image src={c.image} alt={c.city} width={600} height={600} className={styles.image} />
+							{/* <Image src={c.image} alt={c.city} width={600} height={600} className={styles.image} /> */}
+							<div className={styles.image}>
+								<iframe src={c.map} frameborder="0"></iframe>
+							</div>
 
 							<div className={styles.content}>
 								<div className={styles.city}>{c.city}</div>
