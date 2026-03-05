@@ -50,7 +50,9 @@ export default function Contacts() {
 					))}
 				</div>
 				<div className={styles.legal} onClick={() => setOpen((prev) => !prev)}>
-					<div className={cn(styles.legalTitle, open && styles.legalTitleOpen)}>юридическая информация</div>
+					<div className={cn(styles.legalTitle, open && styles.legalTitleOpen)}>
+						<p>юридическая информация</p>
+					</div>
 					<div className={cn(styles.legalText, open && styles.legalTextOpen)}>
 						<p>Название: ТЭММО РОКСАНА НИКОЛАЕВНА (ИП)</p>
 						<p>

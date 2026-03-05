@@ -4,7 +4,25 @@ import './globals.sass';
 import { Manrope } from 'next/font/google';
 import localFont from 'next/font/local';
 
+import Script from 'next/script';
+import type { Viewport, Metadata } from 'next';
+
+export const metadata: Metadata = {
+	other: {
+		language: 'Russian',
+		'format-detection': 'telephone=no'
+	}
+};
+
 import TransitionProvider from '@/components/TransitionProvider';
+
+export const viewport: Viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	maximumScale: 1,
+	minimumScale: 1,
+	userScalable: false
+};
 
 const manrope = Manrope({
 	subsets: ['latin', 'cyrillic'],
@@ -40,6 +58,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="ru" className={`${manrope.variable} ${roadRadio.variable}`}>
 			<body>
 				<TransitionProvider>{children}</TransitionProvider>
+
+				<Script id="viewport-fix" strategy="beforeInteractive">
+					{`
+						const meta = document.querySelector('meta[name="viewport"]');
+						if (meta) {
+							meta.setAttribute(
+								'content',
+								'user-scalable=no, width=' +
+								(screen.width <= 390 ? 390 : 'device-width')
+							);
+						}
+					`}
+				</Script>
 			</body>
 		</html>
 	);
