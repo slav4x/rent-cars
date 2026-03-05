@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 
 const manrope = Manrope({
 	subsets: ['latin', 'cyrillic'],
-	weight: ['300', '400', '500', '600'],
+	weight: ['300', '400', '500', '600', '700'],
 	display: 'swap',
 	variable: '--font-manrope'
 });

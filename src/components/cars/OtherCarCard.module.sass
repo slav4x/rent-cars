@@ -1,0 +1,66 @@
+.card
+	background: #F9F9F9
+	border-radius: 12px
+	overflow: hidden
+
+.image
+	width: 100%
+	height: 200px
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+
+.content
+	padding: 12px
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	align-items: flex-start
+
+.name
+	font-family: var(--font-roadradio)
+	font-size: 24px
+	font-weight: 300
+	line-height: 0.8
+	text-transform: uppercase
+
+.price
+	font-size: 20px
+	line-height: 1.2
+	font-weight: 600
+	margin: 12px 0 20px
+
+.btn
+	margin-top: auto
+	width: 100%
+	font-size: 17px
+	line-height: 0.9
+	padding: 14px 0
+	border-radius: 14px
+	background: var(--color-accent)
+	color: var(--color-white)
+	font-weight: 700
+	text-align: center
+
+@media (max-width: 1600px)
+	.name
+		font-size: 20px
+
+@media (max-width: 1200px)
+	.image
+		height: 160px
+
+	.name
+		font-size: 16px
+		line-height: 0.9
+
+	.price
+		font-size: 16px
+		line-height: 1
+
+	.btn
+		font-size: 14px
+		padding: 12px
+		border-radius: 8px
