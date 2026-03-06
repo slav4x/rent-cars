@@ -5,7 +5,7 @@ import styles from './Header.module.sass';
 import { useT } from '@/lib/i18n/useT';
 import { useLangRouting } from '@/lib/i18n/useLangRouting';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils/cn';
 import Image from 'next/image';
 
@@ -24,6 +24,37 @@ export default function Header() {
 	};
 
 	const [open, setOpen] = useState(false);
+	const [hide, setHide] = useState(false);
+
+	const headerRef = useRef<HTMLElement | null>(null);
+	const lastScroll = useRef(0);
+
+	useEffect(() => {
+		const onScroll = () => {
+			const current = window.scrollY;
+			const headerHeight = headerRef.current?.offsetHeight ?? 0;
+
+			// Пока хедер еще не вышел из зоны видимости — ничего не делаем
+			if (current <= headerHeight) {
+				setHide(false);
+				lastScroll.current = current;
+				return;
+			}
+
+			if (current > lastScroll.current) {
+				setHide(true); // вниз
+			} else {
+				setHide(false); // вверх
+			}
+
+			lastScroll.current = current;
+		};
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+
+		return () => window.removeEventListener('scroll', onScroll);
+	}, []);
 
 	const isRounded =
 		pathname === '/certificates' ||
@@ -34,7 +65,10 @@ export default function Header() {
 		pathname.startsWith('/en/cars/');
 
 	return (
-		<header className={cn(styles.header, isRounded && styles.rounded, open && styles.opened)}>
+		<header
+			ref={headerRef}
+			className={cn(styles.header, isRounded && styles.rounded, open && styles.opened, hide && styles.hide)}
+		>
 			<div className="container">
 				<div className={cn(styles.burger, open && styles.active)} onClick={() => setOpen((prev) => !prev)}>
 					<span></span>
@@ -58,18 +92,25 @@ export default function Header() {
 
 				<div className={styles.lang}>
 					<div className={cn(styles.langCurrent, open && styles.langCurrentBlack)}>
-						<Image src={`/img/lang-${isEn ? 'en' : 'ru'}.png`} alt="" width={42} height={28} unoptimized={true} />
+						<Image
+							src={`/img/lang-${isEn ? 'en' : 'ru'}.png`}
+							alt=""
+							width={42}
+							height={28}
+							quality={100}
+							unoptimized={true}
+						/>
 					</div>
 					<ul className={styles.langList}>
 						<li>
 							<Link href={isEn ? switchHref : pathname}>
-								<Image src="/img/lang-ru.png" alt="" width={42} height={28} unoptimized={true} />
+								<Image src="/img/lang-ru.png" alt="" width={42} height={28} quality={100} unoptimized={true} />
 								Русский
 							</Link>
 						</li>
 						<li>
 							<Link href={!isEn ? switchHref : pathname}>
-								<Image src="/img/lang-en.png" alt="" width={42} height={28} unoptimized={true} />
+								<Image src="/img/lang-en.png" alt="" width={42} height={28} quality={100} unoptimized={true} />
 								English
 							</Link>
 						</li>

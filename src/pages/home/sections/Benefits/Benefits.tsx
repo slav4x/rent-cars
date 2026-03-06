@@ -21,6 +21,7 @@ export default function Benefits() {
 								alt=""
 								width={482}
 								height={320}
+								quality={100}
 								unoptimized={true}
 								className={styles.image01}
 							/>
@@ -34,6 +35,7 @@ export default function Benefits() {
 								alt=""
 								width={337}
 								height={114}
+								quality={100}
 								unoptimized={true}
 								className={styles.image02}
 							/>
@@ -48,6 +50,7 @@ export default function Benefits() {
 								alt=""
 								width={161}
 								height={85}
+								quality={100}
 								unoptimized={true}
 								className={styles.image03}
 							/>
@@ -64,6 +67,7 @@ export default function Benefits() {
 								alt=""
 								width={524}
 								height={351}
+								quality={100}
 								unoptimized={true}
 								className={styles.image04}
 							/>

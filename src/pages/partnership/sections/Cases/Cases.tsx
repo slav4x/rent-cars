@@ -37,7 +37,15 @@ export default function Cases() {
 							<article className={styles.card}>
 								<div className={styles.body}>
 									<div className={styles.head}>
-										<Image src={item.image} alt={item.title} width={200} height={200} className={styles.image} />
+										<Image
+											src={item.image}
+											alt={item.title}
+											width={200}
+											height={200}
+											quality={100}
+											unoptimized={true}
+											className={styles.image}
+										/>
 										<h3 className={styles.title}>{item.title}</h3>
 									</div>
 									<ul className={styles.stats}>

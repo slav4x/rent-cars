@@ -77,7 +77,9 @@ export default function Certificates() {
 										src={s.img}
 										alt={s.alt}
 										width={600}
-										height={600}
+										height={100}
+										quality={100}
+										unoptimized={true}
 										style={{ width: '100%', height: 'auto' }}
 										priority={s.name === 'Номинальный'}
 									/>

@@ -29,6 +29,7 @@ export default function Steps() {
 								alt=""
 								width={420}
 								height={490}
+								quality={100}
 								unoptimized={true}
 								className={styles.image}
 							/>
@@ -41,6 +42,7 @@ export default function Steps() {
 								alt=""
 								width={420}
 								height={490}
+								quality={100}
 								unoptimized={true}
 								className={styles.image}
 							/>
@@ -53,6 +55,7 @@ export default function Steps() {
 								alt=""
 								width={420}
 								height={490}
+								quality={100}
 								unoptimized={true}
 								className={styles.image}
 							/>
@@ -67,6 +70,7 @@ export default function Steps() {
 								alt=""
 								width={420}
 								height={490}
+								quality={100}
 								unoptimized={true}
 								className={styles.image}
 							/>
@@ -81,6 +85,7 @@ export default function Steps() {
 								alt=""
 								width={420}
 								height={490}
+								quality={100}
 								unoptimized={true}
 								className={styles.image}
 							/>
@@ -95,6 +100,7 @@ export default function Steps() {
 								alt=""
 								width={420}
 								height={490}
+								quality={100}
 								unoptimized={true}
 								className={styles.image}
 							/>

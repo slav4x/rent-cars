@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 };
 
 import TransitionProvider from '@/components/TransitionProvider';
+import LenisProvider from '@/components/LenisProvider';
 
 export const viewport: Viewport = {
 	width: 'device-width',
@@ -57,7 +58,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="ru" className={`${manrope.variable} ${roadRadio.variable}`}>
 			<body>
-				<TransitionProvider>{children}</TransitionProvider>
+				<LenisProvider>
+					<TransitionProvider>{children}</TransitionProvider>
+				</LenisProvider>
 
 				<Script id="viewport-fix" strategy="beforeInteractive">
 					{`

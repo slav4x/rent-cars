@@ -19,7 +19,7 @@ export default function OtherCarCard({ car }: Props) {
 	return (
 		<article className={styles.card} key={car.id}>
 			<div className={styles.image}>
-				<Image src={car.image} alt={car.title} width={600} height={600} unoptimized />
+				<Image src={car.image} alt={car.title} width={600} height={600} quality={100} unoptimized={true} />
 			</div>
 
 			<div className={styles.content}>

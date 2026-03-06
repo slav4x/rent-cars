@@ -20,7 +20,7 @@ export default function Reviews() {
 						target="_blank"
 						className={styles.rating}
 					>
-						<Image src="/img/yandex.png" alt="" width={130} height={51} unoptimized={true} />
+						<Image src="/img/yandex.png" alt="" width={130} height={51} quality={100} unoptimized={true} />
 						<div className={styles.ratingCount}>5,0</div>
 						<svg width="134" height="22" viewBox="0 0 134 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -65,7 +65,7 @@ export default function Reviews() {
 							<SplideSlide key={r.id}>
 								<article className={styles.card}>
 									<div className={styles.imageWrap}>
-										<Image src={r.imageUrl} alt={r.carName} width={900} height={900} />
+										<Image src={r.imageUrl} alt={r.carName} width={900} height={900} quality={100} unoptimized={true} />
 									</div>
 
 									<div className={styles.content}>
@@ -78,6 +78,7 @@ export default function Reviews() {
 												alt={r.author}
 												width={78}
 												height={78}
+												quality={100}
 												unoptimized={true}
 											/>
 											<span className={styles.author}>{r.author}</span>

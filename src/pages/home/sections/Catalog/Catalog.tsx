@@ -53,7 +53,8 @@ export default function Catalog() {
 				<h2 className="title">
 					Все машины
 					<br /> готовы
-					<Image src="/img/svg/catalog-icon.svg" alt="" width={56} height={56} />к поездке
+					<Image src="/img/svg/catalog-icon.svg" alt="" width={56} height={56} quality={100} unoptimized={true} />к
+					поездке
 				</h2>
 				<div className={styles.categories}>
 					{carCategories.map((cat) => (

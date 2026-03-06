@@ -58,7 +58,15 @@ export default function Conditions() {
 								Оставьте заявку на сайте или свяжитесь с нами по телефону, чтобы обсудить все детали
 							</div>
 						</div>
-						<Image src="/img/conditions-card-01.png" alt="" width={899} height={670} className={styles.image01} />
+						<Image
+							src="/img/conditions-card-01.png"
+							alt=""
+							width={899}
+							height={670}
+							quality={100}
+							unoptimized={true}
+							className={styles.image01}
+						/>
 					</div>
 					<div className={styles.card}>
 						<div className={styles.cardContent}>
@@ -72,7 +80,15 @@ export default function Conditions() {
 								После бронирования автомобиля вам потребуется отправить свои документы для проверки службой безопасности
 							</div>
 						</div>
-						<Image src="/img/conditions-card-02.png" alt="" width={907} height={744} className={styles.image02} />
+						<Image
+							src="/img/conditions-card-02.png"
+							alt=""
+							width={907}
+							height={744}
+							quality={100}
+							unoptimized={true}
+							className={styles.image02}
+						/>
 					</div>
 					<div className={styles.card}>
 						<div className={styles.cardContent}>
@@ -90,7 +106,15 @@ export default function Conditions() {
 								Внесение залога и оплаты
 							</div>
 						</div>
-						<Image src="/img/conditions-card-03.png" alt="" width={527} height={643} className={styles.image03} />
+						<Image
+							src="/img/conditions-card-03.png"
+							alt=""
+							width={527}
+							height={643}
+							quality={100}
+							unoptimized={true}
+							className={styles.image03}
+						/>
 					</div>
 				</Scroller>
 			</div>
