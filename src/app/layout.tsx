@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 import LenisProvider from "@/components/LenisProvider";
 import AosProvider from "@/components/AOSProvider";
+import TransitionProvider from "@/components/TransitionProvider";
 
 export const viewport: Viewport = {
     width: "device-width",
@@ -59,7 +60,9 @@ export default function RootLayout({
         <html lang="ru" className={`${manrope.variable} ${roadRadio.variable}`}>
             <body>
                 <LenisProvider>
-                    <AosProvider>{children}</AosProvider>
+                    <TransitionProvider>
+                        <AosProvider>{children}</AosProvider>
+                    </TransitionProvider>
                 </LenisProvider>
             </body>
         </html>

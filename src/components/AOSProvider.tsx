@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -9,6 +10,8 @@ export default function AosProvider({
 }: {
     children: React.ReactNode;
 }) {
+    const pathname = usePathname();
+
     useEffect(() => {
         AOS.init({
             duration: 300,
@@ -19,6 +22,10 @@ export default function AosProvider({
 
         AOS.refresh();
     }, []);
+
+    useEffect(() => {
+        AOS.refreshHard();
+    }, [pathname]);
 
     return <>{children}</>;
 }
