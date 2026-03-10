@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { dict } from './dict';
-import { useLangFromPath } from './useLangFromPath';
+import { dict } from "./dict";
+import { useLangFromPath } from "./useLangFromPath";
 
 export function useT() {
-	const lang = useLangFromPath();
-	return dict[lang];
+    const lang = useLangFromPath();
+    return dict[lang];
 }

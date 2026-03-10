@@ -1,20 +1,24 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default function AosProvider({ children }: { children: React.ReactNode }) {
-	useEffect(() => {
-		AOS.init({
-			duration: 300,
-			offset: 80,
-			once: true,
-			easing: 'ease-out'
-		});
+export default function AosProvider({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    useEffect(() => {
+        AOS.init({
+            duration: 300,
+            offset: 80,
+            once: true,
+            easing: "ease-out",
+        });
 
-		AOS.refresh();
-	}, []);
+        AOS.refresh();
+    }, []);
 
-	return <>{children}</>;
+    return <>{children}</>;
 }

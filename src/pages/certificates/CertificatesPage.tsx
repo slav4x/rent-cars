@@ -1,9 +1,9 @@
-import Certificates from './sections/Certificates';
+import Certificates from "./sections/Certificates";
 
 export default function CertificatesPage() {
-	return (
-		<>
-			<Certificates />
-		</>
-	);
+    return (
+        <>
+            <Certificates />
+        </>
+    );
 }

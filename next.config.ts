@@ -1,14 +1,12 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
+import createBundleAnalyzer from "@next/bundle-analyzer";
 
-const nextConfig: NextConfig = {
-	/* config options here */
-	reactCompiler: true
-};
-
-export default nextConfig;
-
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-	enabled: process.env.ANALYZE === 'true'
+const withBundleAnalyzer = createBundleAnalyzer({
+    enabled: process.env.ANALYZE === "true",
 });
 
-module.exports = withBundleAnalyzer({});
+const nextConfig: NextConfig = {
+    reactCompiler: true,
+};
+
+export default withBundleAnalyzer(nextConfig);

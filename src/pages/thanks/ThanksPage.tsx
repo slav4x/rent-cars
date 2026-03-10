@@ -1,9 +1,9 @@
-import Thanks from './sections/Thanks';
+import Thanks from "./sections/Thanks";
 
 export default function ThanksPage() {
-	return (
-		<>
-			<Thanks />
-		</>
-	);
+    return (
+        <>
+            <Thanks />
+        </>
+    );
 }
