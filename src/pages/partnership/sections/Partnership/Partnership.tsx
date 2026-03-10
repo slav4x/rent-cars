@@ -27,8 +27,8 @@ export default function Partnership() {
                     quality={100}
                     unoptimized={true}
                     className={styles.carsLeft}
-                    // data-aos="fade-up"
-                    // data-aos-delay="700"
+                    data-aos="fade-up"
+                    data-aos-delay="700"
                 />
                 <Image
                     src="/img/partnership-cars-02.png"
@@ -38,8 +38,8 @@ export default function Partnership() {
                     quality={100}
                     unoptimized={true}
                     className={styles.carsMiddle}
-                    // data-aos="fade-up"
-                    // data-aos-delay="500"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
                 />
                 <Image
                     src="/img/partnership-cars-03.png"
@@ -49,8 +49,8 @@ export default function Partnership() {
                     quality={100}
                     unoptimized={true}
                     className={styles.carsRight}
-                    // data-aos="fade-up"
-                    // data-aos-delay="600"
+                    data-aos="fade-up"
+                    data-aos-delay="600"
                 />
             </div>
             <Image
