@@ -48,7 +48,12 @@ export default function TransitionProvider({
         if (anchor.hasAttribute("download")) return;
 
         const rawHref = anchor.getAttribute("href");
-        if (!rawHref || rawHref.startsWith("mailto:") || rawHref.startsWith("tel:")) return;
+        if (
+            !rawHref ||
+            rawHref.startsWith("mailto:") ||
+            rawHref.startsWith("tel:")
+        )
+            return;
         if (rawHref.startsWith("#")) return;
         if (anchor.hasAttribute("data-no-transition")) return;
         if (anchor.getAttribute("data-transition") === "off") return;
@@ -87,7 +92,7 @@ export default function TransitionProvider({
             onClickCapture={handleClickCapture}
             onAnimationComplete={handleAnimationComplete}
             animate={{ opacity }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.24, ease: "easeIn" }}
             style={{ pointerEvents: isLeaving ? "none" : "auto" }}
         >
             {children}
