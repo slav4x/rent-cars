@@ -1,5 +1,5 @@
 import PublicLayout from "@/components/layout/PublicLayout";
-import ContactsPage from "@/pages/contacts/ContactsPage";
+import ContactsPage from "@/views/contacts/ContactsPage";
 
 import type { Metadata } from "next";
 

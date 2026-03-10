@@ -1,5 +1,5 @@
 import PublicLayout from "@/components/layout/PublicLayout";
-import CertificatesPage from "@/pages/certificates/CertificatesPage";
+import CertificatesPage from "@/views/certificates/CertificatesPage";
 
 import type { Metadata } from "next";
 

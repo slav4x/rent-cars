@@ -1,4 +1,4 @@
-import ThanksPage from "@/pages/thanks/ThanksPage";
+import ThanksPage from "@/views/thanks/ThanksPage";
 
 import type { Metadata } from "next";
 

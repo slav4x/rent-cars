@@ -1,6 +1,6 @@
 import PublicLayout from "@/components/layout/PublicLayout";
 import { cars } from "@/data/mocks/cars";
-import CarsPage from "@/pages/cars/CarsPage";
+import CarsPage from "@/views/cars/CarsPage";
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";

@@ -1,5 +1,5 @@
 import PublicLayout from "@/components/layout/PublicLayout";
-import HomePage from "@/pages/home/HomePage";
+import HomePage from "@/views/home/HomePage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

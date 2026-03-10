@@ -1,5 +1,5 @@
 import PublicLayout from "@/components/layout/PublicLayout";
-import PartnershipPage from "@/pages/partnership/PartnershipPage";
+import PartnershipPage from "@/views/partnership/PartnershipPage";
 
 import type { Metadata } from "next";
 
