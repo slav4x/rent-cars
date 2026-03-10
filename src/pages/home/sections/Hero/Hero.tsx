@@ -5,6 +5,8 @@ import styles from './Hero.module.sass';
 import { useLangRouting } from '@/lib/i18n/useLangRouting';
 import Image from 'next/image';
 
+import FadeUp from '@/components/ui/FadeUp';
+
 export default function Hero() {
 	const { href } = useLangRouting();
 
@@ -12,8 +14,11 @@ export default function Hero() {
 		<>
 			<section className={styles.hero}>
 				<div className="container">
-					<h1 className={styles.title}>Аренда автомобилей для каждого</h1>
-					<div className={styles.search}>
+					<h1 className={styles.title} data-aos="fade-up">
+						Аренда автомобилей для каждого
+					</h1>
+
+					<div className={styles.search} data-aos="fade-up" data-aos-delay="400">
 						<div className={styles.searchItem}>
 							<div className={styles.searchLabel}>Город</div>
 						</div>
@@ -24,25 +29,41 @@ export default function Hero() {
 							<div className={styles.searchLabel}>Конец аренды</div>
 						</div>
 					</div>
+
+					<Image
+						src="/img/hero-cars-01.png"
+						alt=""
+						width={403}
+						height={478}
+						quality={100}
+						unoptimized={true}
+						className={styles.carsLeft}
+						data-aos="fade-up"
+						data-aos-delay="700"
+					/>
+					<Image
+						src="/img/hero-cars-02.png"
+						alt=""
+						width={1007}
+						height={1200}
+						quality={100}
+						unoptimized={true}
+						className={styles.carsMiddle}
+						data-aos="fade-up"
+						data-aos-delay="500"
+					/>
+					<Image
+						src="/img/hero-cars-03.png"
+						alt=""
+						width={447}
+						height={401}
+						quality={100}
+						unoptimized={true}
+						className={styles.carsRight}
+						data-aos="fade-up"
+						data-aos-delay="600"
+					/>
 				</div>
-				<Image
-					src="/img/hero-cars.png"
-					alt=""
-					width={1840}
-					height={430}
-					quality={100}
-					unoptimized={true}
-					className={styles.cars}
-				/>
-				<Image
-					src="/img/hero-cars-mob.png"
-					alt=""
-					width={962}
-					height={460}
-					quality={100}
-					unoptimized={true}
-					className={styles.carsMob}
-				/>
 				<Image
 					src="/img/hero-background-2.jpg"
 					alt=""
