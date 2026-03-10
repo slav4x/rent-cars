@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import Fixed from "./Fixed";
 
 export default function PublicLayout({
     children,
@@ -10,6 +11,7 @@ export default function PublicLayout({
         <>
             <Header />
             <main>{children}</main>
+            <Fixed />
             <Footer />
         </>
     );
