@@ -9,9 +9,10 @@ import { useLangRouting } from "@/lib/i18n/useLangRouting";
 
 type Props = {
     car: Car;
+    hrefBase?: string;
 };
 
-export default function OtherCarCard({ car }: Props) {
+export default function OtherCarCard({ car, hrefBase = "/cars" }: Props) {
     const { href, isEn } = useLangRouting();
 
     const price = formatPriceRub(car.price, isEn ? "en" : "ru");
@@ -35,7 +36,7 @@ export default function OtherCarCard({ car }: Props) {
                     {isEn ? "from " : "от "} {price} ₽
                 </div>
 
-                <Link href={href(`/cars/${car.slug}`)} className={styles.btn}>
+                <Link href={href(`${hrefBase}/${car.slug}`)} className={styles.btn}>
                     {isEn ? "More details" : "Подробнее"}
                 </Link>
             </div>

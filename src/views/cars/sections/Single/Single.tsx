@@ -29,9 +29,10 @@ const slides: Slide[] = [
 
 type Props = {
     car: Car;
+    hrefBase?: string;
 };
 
-export default function Single({ car }: Props) {
+export default function Single({ car, hrefBase = "/cars" }: Props) {
     const mainRef = useRef<InstanceType<typeof Splide> | null>(null);
     const thumbsRef = useRef<InstanceType<typeof Splide> | null>(null);
 
@@ -51,10 +52,10 @@ export default function Single({ car }: Props) {
                 <div className={styles.head}>
                     <ul className={styles.breadcrumbs}>
                         <li>
-                            <Link href={href("/")}>Забронировать авто</Link>
+                            <Link href={href(hrefBase)}>Забронировать авто</Link>
                         </li>
                         <li>
-                            <Link href={href(`/cars/${car.slug}`)}>
+                            <Link href={href(`${hrefBase}/${car.slug}`)}>
                                 {car.title}
                             </Link>
                         </li>

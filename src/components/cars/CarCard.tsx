@@ -9,13 +9,14 @@ import { useLangRouting } from "@/lib/i18n/useLangRouting";
 
 type Props = {
     car: Car;
+    hrefBase?: string;
 };
 
-export default function CarCard({ car }: Props) {
+export default function CarCard({ car, hrefBase = "/cars" }: Props) {
     const { href, isEn } = useLangRouting();
 
     return (
-        <Link href={href(`/cars/${car.slug}`)} className={styles.card}>
+        <Link href={href(`${hrefBase}/${car.slug}`)} className={styles.card}>
             <div className={styles.image}>
                 <Image
                     src={car.image}

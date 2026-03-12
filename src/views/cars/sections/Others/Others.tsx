@@ -10,9 +10,13 @@ import OtherCarCard from "@/components/cars/OtherCarCard";
 
 type Props = {
     currentCarId: string;
+    hrefBase?: string;
 };
 
-export default function Others({ currentCarId }: Props) {
+export default function Others({
+    currentCarId,
+    hrefBase = "/cars",
+}: Props) {
     const otherCars = cars.filter((car) => car.id !== currentCarId);
 
     return (
@@ -47,7 +51,7 @@ export default function Others({ currentCarId }: Props) {
                     <SplideTrack>
                         {otherCars.map((car) => (
                             <SplideSlide key={car.id}>
-                                <OtherCarCard car={car} />
+                                <OtherCarCard car={car} hrefBase={hrefBase} />
                             </SplideSlide>
                         ))}
                     </SplideTrack>

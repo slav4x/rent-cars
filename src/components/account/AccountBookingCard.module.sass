@@ -1,0 +1,168 @@
+.card
+	background: #F9F9F9
+	overflow: hidden
+	border-radius: 25px
+	border: 1px solid #E9E1D8
+
+.image
+	img
+		width: 100%
+		height: 220px
+		object-fit: cover
+		object-position: center
+
+.content
+	padding: 18px
+
+.top
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 12px
+	margin-bottom: 14px
+
+.code
+	font-size: 12px
+	line-height: 1.2
+	font-weight: 700
+	letter-spacing: 0.08em
+	color: rgba(53, 53, 53, 0.6)
+
+.badge
+	padding: 8px 12px
+	border-radius: 99px
+	background: rgba(201, 167, 127, 0.14)
+	color: #8A6338
+	font-size: 12px
+	line-height: 1.2
+
+.title
+	font-family: var(--font-roadradio)
+	font-size: 24px
+	font-weight: 300
+	line-height: 0.9
+	text-transform: uppercase
+
+.info
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	gap: 12px
+	margin-top: 16px
+	padding-bottom: 16px
+	border-bottom: 1px solid #D9D9D9
+
+.city,
+.meta
+	width: 100%
+	min-height: 28px
+	border-radius: 99px
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 12px
+	line-height: 1.2
+	padding: 6px 10px
+
+.meta
+	gap: 12px
+	&::after
+		content: ''
+		display: block
+		width: 14px
+		height: 8px
+		background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 0.5H0M14 7.5H0M14 4H3.5' stroke='%23353535'/%3E%3C/svg%3E%0A")
+
+.city
+	background: #013E77
+	color: var(--color-white)
+
+.meta
+	background: #D9D9D9
+	color: #353535
+
+.time
+	width: 100%
+	background: var(--color-white)
+	font-size: 12px
+	line-height: 1.3
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 4px
+	padding: 8px
+	border-radius: 10px
+	border: 1px solid #D9D9D9
+	span
+		display: inline-flex
+		width: fit-content
+		background: rgba(32, 128, 211, 0.1)
+		border-radius: 6px
+		padding: 4px 8px
+
+.price
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	gap: 16px
+	padding-top: 16px
+	b
+		font-size: 32px
+		line-height: 1
+		font-weight: 600
+	span
+		font-size: 12px
+		line-height: 1.35
+		opacity: 0.5
+		max-width: 145px
+
+.controls
+	margin-top: 20px
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	gap: 12px
+
+.btn,
+.btnOutline
+	min-height: 44px
+	border-radius: 14px
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 16px
+	line-height: 1
+	font-weight: 700
+	border: 1px solid var(--color-accent)
+	transition: var(--transition-ms)
+
+.btn
+	background: var(--color-accent)
+	color: var(--color-white)
+
+.btnOutline
+	background: transparent
+	color: var(--color-accent)
+
+@media (max-width: 1200px)
+	.image
+		img
+			height: 190px
+
+	.content
+		padding: 14px
+
+	.title
+		font-size: 20px
+
+	.price
+		flex-direction: column
+
+		span
+			max-width: 100%
+			text-align: left
+
+@media (max-width: 768px)
+	.info
+		grid-template-columns: 1fr
+
+	.controls
+		grid-template-columns: 1fr
