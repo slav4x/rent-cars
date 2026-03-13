@@ -42,5 +42,5 @@ export default async function Page({ params }: PageProps) {
         notFound();
     }
 
-    return <AccountSettingsPage />;
+    return <AccountSettingsPage section={section as SettingsSection} />;
 }

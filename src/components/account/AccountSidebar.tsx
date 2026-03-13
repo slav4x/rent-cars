@@ -114,9 +114,12 @@ export default function AccountSidebar() {
                                 </svg>
                             </Link>
                         </div>
-                        <div className={styles.status}>
+                        <Link
+                            href={href("/account/settings/verification")}
+                            className={styles.status}
+                        >
                             Аккаунт не верифицирован
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <ul className={cn(styles.nav, hide && styles.navHide)}>
