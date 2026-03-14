@@ -1,41 +1,29 @@
 import view from "./AccountView.module.sass";
-import {
-    settingsSectionMeta,
-    verifiedDocuments,
-    type SettingsSection,
-} from "@/data/mocks/account";
+import styles from "./AccountSettingsPage.module.sass";
+import { type SettingsSection } from "@/data/mocks/account";
+import AccountSettingsNav from "@/components/account/AccountSettingsNav";
+import AccountSettingsProfilePage from "./settings/AccountSettingsProfilePage";
+import AccountSettingsVerificationPage from "./settings/AccountSettingsVerificationPage";
+import AccountSettingsPrivacyPage from "./settings/AccountSettingsPrivacyPage";
 
 type Props = {
     section: SettingsSection;
 };
 
-const sectionContent: Record<
-    SettingsSection,
-    Array<{ label: string; value: string }>
-> = {
-    profile: [
-        { label: "ФИО", value: "Иван Иванов" },
-        { label: "Фото", value: "Загружено" },
-        { label: "Дата рождения", value: "14 мая 1992" },
-    ],
-    verification: verifiedDocuments.map((document) => ({
-        label: document.label,
-        value: document.status,
-    })),
-    privacy: [
-        { label: "Пароль", value: "Изменить пароль" },
-        { label: "Почта", value: "ivan.petrov@example.com" },
-        { label: "Телефон", value: "+7 (999) 123-45-67" },
-    ],
+const sectionComponents: Record<SettingsSection, React.ReactNode> = {
+    profile: <AccountSettingsProfilePage />,
+    verification: <AccountSettingsVerificationPage />,
+    privacy: <AccountSettingsPrivacyPage />,
 };
 
 export default function AccountSettingsPage({ section }: Props) {
-    const meta = settingsSectionMeta[section];
-
     return (
-        <section>
+        <section className={styles.page}>
             <div className={view.title}>Настройки</div>
-            <div>{meta.title}</div>
+
+            <AccountSettingsNav active={section} />
+
+            {sectionComponents[section]}
         </section>
     );
 }
