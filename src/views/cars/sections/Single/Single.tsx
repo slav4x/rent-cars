@@ -10,6 +10,7 @@ import styles from "./Single.module.sass";
 import Link from "next/link";
 import { useLangRouting } from "@/lib/i18n/useLangRouting";
 import type { Car } from "@/data/mocks/cars";
+import { cn } from "@/lib/utils/cn";
 
 type Slide = {
     id: number;
@@ -30,9 +31,14 @@ const slides: Slide[] = [
 type Props = {
     car: Car;
     hrefBase?: string;
+    variant?: "default" | "account";
 };
 
-export default function Single({ car, hrefBase = "/cars" }: Props) {
+export default function Single({
+    car,
+    hrefBase = "/cars",
+    variant = "default",
+}: Props) {
     const mainRef = useRef<InstanceType<typeof Splide> | null>(null);
     const thumbsRef = useRef<InstanceType<typeof Splide> | null>(null);
 
@@ -47,7 +53,12 @@ export default function Single({ car, hrefBase = "/cars" }: Props) {
     const { href } = useLangRouting();
 
     return (
-        <section className={styles.single}>
+        <section
+            className={cn(
+                styles.single,
+                variant === "account" && styles.singleAccount,
+            )}
+        >
             <div className="container">
                 <div className={styles.head}>
                     <ul className={styles.breadcrumbs}>

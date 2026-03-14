@@ -28,5 +28,5 @@ export default async function Page({ params }: PageProps) {
         notFound();
     }
 
-    return <CarsPage car={car} hrefBase="/account/cars" />;
+    return <CarsPage car={car} hrefBase="/account/cars" variant="account" />;
 }

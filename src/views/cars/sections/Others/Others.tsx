@@ -4,6 +4,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 import styles from "./Others.module.sass";
+import { cn } from "@/lib/utils/cn";
 
 import { cars } from "@/data/mocks/cars";
 import OtherCarCard from "@/components/cars/OtherCarCard";
@@ -11,16 +12,23 @@ import OtherCarCard from "@/components/cars/OtherCarCard";
 type Props = {
     currentCarId: string;
     hrefBase?: string;
+    variant?: "default" | "account";
 };
 
 export default function Others({
     currentCarId,
     hrefBase = "/cars",
+    variant = "default",
 }: Props) {
     const otherCars = cars.filter((car) => car.id !== currentCarId);
 
     return (
-        <section className={styles.others}>
+        <section
+            className={cn(
+                styles.others,
+                variant === "account" && styles.othersAccount,
+            )}
+        >
             <div className="container">
                 <h2 className={styles.title}>Другие автомобили</h2>
                 <Splide
