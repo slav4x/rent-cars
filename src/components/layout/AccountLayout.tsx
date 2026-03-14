@@ -1,6 +1,7 @@
 import AccountSidebar from "@/components/account/AccountSidebar";
 
 import styles from "./AccountLayout.module.sass";
+import AccountHeader from "../account/AccountHeader";
 
 export default function AccountLayout({
     children,
@@ -9,7 +10,7 @@ export default function AccountLayout({
 }) {
     return (
         <>
-            {/* <Header /> */}
+            <AccountHeader />
             <div className={styles.layout}>
                 <AccountSidebar />
                 <main
