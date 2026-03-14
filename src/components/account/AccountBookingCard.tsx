@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import styles from "./AccountBookingCard.module.sass";
@@ -7,6 +9,8 @@ import {
     type BookingStatus,
 } from "@/data/mocks/account";
 import { formatPriceRub } from "@/lib/format/money";
+import { useState } from "react";
+import { cn } from "@/lib/utils/cn";
 
 type Props = {
     booking: Booking;
@@ -50,6 +54,8 @@ const actionLabels: Record<
 };
 
 export default function AccountBookingCard({ booking, status }: Props) {
+    const [open, setOpen] = useState(false);
+
     const car = getBookingCar(booking.carId);
 
     if (!car) {
@@ -61,7 +67,7 @@ export default function AccountBookingCard({ booking, status }: Props) {
     const returnDate = formatBookingDate(booking.returnAt);
 
     return (
-        <article className={styles.card}>
+        <article className={cn(styles.card, open && styles.cardOpen)}>
             <div className={styles.image}>
                 <Image
                     src={car.image}
@@ -72,13 +78,17 @@ export default function AccountBookingCard({ booking, status }: Props) {
                     unoptimized
                 />
             </div>
-
             <div className={styles.content}>
                 <div className={styles.title}>{car.title}</div>
 
                 <div className={styles.info}>
                     <div className={styles.city}>{booking.city}</div>
-                    <div className={styles.meta}>Детали</div>
+                    <div
+                        className={styles.meta}
+                        onClick={() => setOpen((prev) => !prev)}
+                    >
+                        Детали
+                    </div>
                     <div className={styles.time}>
                         {pickup.label} <span>{pickup.time}</span>
                     </div>
@@ -99,6 +109,54 @@ export default function AccountBookingCard({ booking, status }: Props) {
                     <button type="button" className={styles.btnOutline}>
                         Отменить
                     </button>
+                </div>
+            </div>
+            <div className={cn(styles.details, open && styles.detailsOpen)}>
+                <div
+                    className={styles.detailsClose}
+                    onClick={() => setOpen((prev) => !prev)}
+                ></div>
+                <div className={styles.additionally}>
+                    <div className={styles.additionallyTitle}>
+                        Дополнительно:
+                    </div>
+                    <div className={styles.additionallyItem}>
+                        <span>Выдача</span>
+                        <p>Адрес</p>
+                    </div>
+                    <div className={styles.additionallyItem}>
+                        <span>Возврат</span>
+                        <p>Адрес</p>
+                    </div>
+                </div>
+                <div className={styles.spec}>
+                    <div className={styles.specTitle}>Характеристики</div>
+                    <ul className={styles.specList}>
+                        <li>
+                            <span>Класс:</span>
+                            <p>Премиум</p>
+                        </li>
+                        <li>
+                            <span>Марка:</span>
+                            <p>Porche</p>
+                        </li>
+                        <li>
+                            <span>Тип кузова:</span>
+                            <p>Фастбэк</p>
+                        </li>
+                        <li>
+                            <span>Привод:</span>
+                            <p>Передний</p>
+                        </li>
+                        <li>
+                            <span>Тип топлива:</span>
+                            <p>Бензин</p>
+                        </li>
+                        <li>
+                            <span>Количество мест:</span>
+                            <p>5</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </article>
