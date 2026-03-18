@@ -315,6 +315,16 @@
 	.specItem
 		min-width: calc((100% - 20px) / 3)
 
+	.singleAccount
+		padding: 0 0 40px
+
+		.main
+			width: calc(100% - 50%)
+		.sidebar
+			width: calc(100% - 50% - 30px)
+		.specItem
+			min-width: calc((100% - 30px) / 2)
+
 @media (max-width: 1200px)
 	.main
 		width: 540px
@@ -359,6 +369,12 @@
 			svg
 				width: 6px
 				height: 12px
+
+	.singleAccount
+		.main
+			width: 100%
+		.sidebar
+			width: 100%
 
 @media (max-width: 1024px)
 	.main
