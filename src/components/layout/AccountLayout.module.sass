@@ -15,3 +15,22 @@
 	min-height: 0
 	&::-webkit-scrollbar
 		display: none
+
+@media (max-width: 1600px)
+	.layout
+		height: calc(100svh - 92px)
+
+@media (max-width: 1200px)
+	.layout
+		height: calc(100svh - 84px)
+
+	.content
+		padding: 20px
+
+@media (max-width: 600px)
+	.layout
+		height: auto
+		overflow: initial
+
+	.content
+		padding: 20px 8px
