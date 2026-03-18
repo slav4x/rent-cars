@@ -25,6 +25,8 @@
 	flex-wrap: wrap
 	align-items: center
 	gap: 12px
+	svg
+		display: block
 
 .content
 	padding-top: 70px
@@ -33,7 +35,8 @@
 	font-weight: 600
 
 .btn
-	width: 560px
+	width: 100%
+	max-width: 560px
 	height: 68px
 	background: var(--color-accent)
 	border-radius: 14px
@@ -45,3 +48,40 @@
 	flex-wrap: wrap
 	align-items: center
 	justify-content: center
+
+@media (max-width: 1600px)
+	.btn
+		max-width: 440px
+		height: 52px
+		font-size: 20px
+
+@media (max-width: 1200px)
+	.card
+		padding: 20px
+		border-radius: 16px
+		gap: 20px
+
+	.title
+		font-size: 18px
+		gap: 8px
+		svg
+			width: 18px
+			height: 18px
+
+	.content
+		font-size: 15px
+
+	.btn
+		max-width: 350px
+		height: 44px
+		font-size: 16px
+
+	.dashboard
+		gap: 20px
+
+@media (max-width: 600px)
+	.dashboard
+		gap: 8px
+
+	.btn
+		max-width: 100%
