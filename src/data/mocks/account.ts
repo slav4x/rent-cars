@@ -97,6 +97,15 @@ export const accountBookings: Booking[] = [
         totalPrice: 38000,
     },
     {
+        id: "BR-100",
+        status: "upcoming",
+        carId: "10",
+        pickupAt: "16 апреля 2026, 11:00",
+        returnAt: "20 апреля 2026, 11:00",
+        city: "Краснодар",
+        totalPrice: 38000,
+    },
+    {
         id: "BR-0995",
         status: "history",
         carId: "5",

@@ -26,28 +26,6 @@
 .content
 	padding: 18px
 
-.top
-	display: flex
-	align-items: center
-	justify-content: space-between
-	gap: 12px
-	margin-bottom: 14px
-
-.code
-	font-size: 12px
-	line-height: 1.2
-	font-weight: 700
-	letter-spacing: 0.08em
-	color: rgba(53, 53, 53, 0.6)
-
-.badge
-	padding: 8px 12px
-	border-radius: 99px
-	background: rgba(201, 167, 127, 0.14)
-	color: #8A6338
-	font-size: 12px
-	line-height: 1.2
-
 .title
 	font-family: var(--font-roadradio)
 	font-size: 24px
@@ -114,7 +92,7 @@
 
 .price
 	display: flex
-	align-items: flex-start
+	align-items: center
 	justify-content: space-between
 	gap: 16px
 	padding-top: 16px
@@ -177,7 +155,7 @@
 .detailsOpen
 	width: calc(100% + 32px)
 	padding: 12px
-	border-color: #D9D9D9
+	border-color: #D9D9D9 !important
 
 .detailsClose
 	position: absolute
@@ -240,3 +218,171 @@
 		font-weight: 500
 		&::-webkit-scrollbar
 			display: none
+
+@media (min-width: 1600px)
+	.card:nth-child(3n)
+		.details
+			left: initial
+			right: 100%
+			border-top-right-radius: 0px
+			border-bottom-right-radius: 0px
+			border-top-left-radius: 25px
+			border-bottom-left-radius: 25px
+			border-left: 1px solid transparent
+			border-right: 0px
+	.cardOpen:nth-child(3n)
+		border-top-right-radius: 25px
+		border-bottom-right-radius: 25px
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+		.image
+			border-top-right-radius: 25px
+			border-top-left-radius: 0
+
+@media (max-width: 1600px)
+	.card
+		border-radius: 20px
+
+	.image
+		border-top-left-radius: 20px
+		border-top-right-radius: 20px
+		img
+			height: 200px
+
+	.content
+		padding: 12px
+
+	.info
+		margin-top: 12px
+		padding-bottom: 12px
+
+	.city,
+	.meta
+		min-height: 26px
+
+	.meta
+		gap: 10px
+
+	.time
+		border-radius: 8px
+		span
+			border-radius: 4px
+			padding: 4px
+
+	.price
+		gap: 12px
+		padding-top: 12px
+		b
+			font-size: 24px
+			line-height: 1
+			font-weight: 600
+
+	.details
+		border-top-right-radius: 20px
+		border-bottom-right-radius: 20px
+
+@media (max-width: 1200px)
+	.image
+		img
+			height: 150px
+
+	.title
+		font-size: 16px
+
+	.city,
+	.meta
+		min-height: 26px
+		font-size: 10px
+		line-height: 8px
+		padding: 8px 0
+
+	.time
+		font-size: 10px
+		padding: 8px
+		line-height: 8px
+
+	.price
+		b
+			font-size: 18px
+		span
+			font-size: 10px
+			max-width: 120px
+
+	.btn,
+	.btnOutline
+		font-size: 14px
+		line-height: 12px
+		min-height: 36px
+		border-radius: 8px
+
+	.controls
+		margin-top: 12px
+		gap: 8px
+
+	.details
+		border-top-right-radius: 20px
+		border-bottom-right-radius: 20px
+
+	.specTitle
+		font-size: 14px
+
+	.specList
+		font-size: 14px
+		line-height: 1.2
+		li
+			padding: 8px 0
+
+	.additionallyTitle
+		font-size: 15px
+
+	.additionallyItem
+		margin-bottom: 12px
+		span
+			font-size: 14px
+		p
+			border-radius: 8px
+			font-size: 14px
+
+	.detailsOpen
+		width: calc(100% + 22px)
+
+@media (min-width: 768px) and (max-width: 1600px)
+	.card:nth-child(2n)
+		.details
+			left: initial
+			right: 100%
+			border-top-right-radius: 0px
+			border-bottom-right-radius: 0px
+			border-top-left-radius: 20px
+			border-bottom-left-radius: 20px
+			border-left: 1px solid transparent
+			border-right: 0px
+	.cardOpen:nth-child(2n)
+		border-top-right-radius: 20px
+		border-bottom-right-radius: 20px
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+		.image
+			border-top-right-radius: 20px
+			border-top-left-radius: 0
+
+@media (max-width: 768px)
+	.card
+		.details
+			left: 0 !important
+			right: 0 !important
+			border-radius: 20px !important
+			border: 1px solid transparent
+			opacity: 0
+			width: 100%
+			pointer-events: none
+			padding: 12px
+		.detailsOpen
+			width: 100%
+			opacity: 1
+			pointer-events: auto
+	.cardOpen
+		border-radius: 20px !important
+		.image
+			border-top-right-radius: 20px !important
+			border-top-left-radius: 20px !important
