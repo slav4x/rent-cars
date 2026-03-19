@@ -23,7 +23,7 @@
 		transform: translateY(-100%)
 
 .burger
-	display: flex
+	display: none
 	flex-wrap: wrap
 	flex-direction: column
 	align-items: flex-start
@@ -217,8 +217,6 @@
 	transition: calc(var(--transition-ms) * 2.5)
 	padding: 25px 0 40px
 	box-shadow: 0px 4px 93.4px rgba(16, 22, 36, 0.18)
-	display: flex
-	flex-wrap: nowrap
 	max-height: 0px
 	overflow: hidden
 
@@ -227,37 +225,6 @@
 	pointer-events: auto
 	top: 16px
 	max-height: 800px
-
-.mobileNav
-	display: flex
-	flex-wrap: nowrap
-	flex-direction: column
-	align-items: flex-start
-	gap: 30px
-	font-family: var(--font-roadradio)
-	line-height: 1.2
-	font-size: 44px
-	margin-left: 34%
-	position: relative
-	z-index: 10
-	li
-		a
-			transition: calc(var(--transition-ms) * 2)
-			position: relative
-			&:hover
-				color: var(--color-accent)
-			&::before
-				content: ''
-				display: block
-				position: absolute
-				top: calc(100% + 2px)
-				left: 0
-				width: 0
-				height: 2px
-				background: var(--color-accent)
-				transition: calc(var(--transition-ms) * 2)
-			&:hover::before
-				width: 100%
 
 .rounded
 	border-bottom-left-radius: 14px
@@ -337,10 +304,6 @@
 		border-radius: 30px
 		padding: 20px 0 40px
 
-	.mobileNav
-		gap: 20px
-		font-size: 36px
-
 @media (max-width: 1200px)
 	.header
 		:global(.container)
@@ -383,10 +346,6 @@
 	.mobileShow
 		top: 8px
 
-	.mobileNav
-		font-size: 32px
-		gap: 16px
-
 	.langCurrent
 		img
 			width: 26px
@@ -416,21 +375,14 @@
 	.mobileShow
 		top: 12px
 
-	.mobileNav
-		font-size: 32px
-		gap: 16px
-		margin-left: 50%
-		transform: translateX(-50%)
-		margin-top: 60px
-
 @media (max-width: 600px)
 	.header
 		:global(.container)
 			padding: 0 8px
 
-@media (max-width: 576px)
 	.burger
 		margin-right: 16px
+		display: flex
 
 	.logo
 		margin-right: auto
@@ -468,14 +420,7 @@
 		border-width: 1px
 
 	.mobile
-		padding-bottom: 30px
-	.mobileNav
-		margin-left: 16px
-		transform: none
-		gap: 16px
-		margin-top: 90px
-		font-size: 30px
-		font-weight: 300
+		padding: 78px 16px 10px
 
 	.rounded
 		border-bottom-left-radius: 10px
@@ -490,3 +435,97 @@
 	.active
 		span
 			width: 30px
+
+	.mobileNav
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		align-items: flex-start
+		width: 100%
+		li
+			width: 100%
+			a
+				padding: 16px 0
+				border-bottom: 1px solid #E6E6E6
+				display: block
+				font-size: 14px
+				line-height: 1.2
+				color: rgba(0,0,0,.5)
+				font-weight: 600
+				transition: var(--transition-ms)
+				&:hover
+					color: var(--color-accent)
+
+			&:last-child
+				a
+					border: 0
+
+	.account
+		padding: 8px
+		border-radius: 8px
+		background: #FAF7F3
+		margin-bottom: 10px
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		gap: 12px
+		position: relative
+
+	.photo
+		width: 56px
+		height: 56px
+		border-radius: 100%
+		border: 1px solid var(--color-accent)
+
+	.info
+		flex: 1
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		align-items: flex-start
+		gap: 8px
+
+	.name
+		font-size: 16px
+		font-weight: 600
+		line-height: 1
+
+	.status
+		font-size: 12px
+		font-weight: 500
+		color: #E41B1B
+		background: rgba(228, 27, 27, 0.1)
+		border-radius: 99px
+		padding: 6px
+		padding-right: 8px
+		display: flex
+		flex-wrap: nowrap
+		align-items: center
+		gap: 6px
+		white-space: nowrap
+		&::before
+			content: ''
+			display: block
+			background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.2' cx='8' cy='8' r='8' fill='%23E41B1B'/%3E%3Cpath d='M7 13V10.9778H9V13H7ZM7 10V3H9V10H7Z' fill='%23E41B1B'/%3E%3C/svg%3E%0A") no-repeat
+			width: 16px
+			height: 16px
+
+	.settings
+		width: 24px
+		height: 24px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		border: 1px solid var(--color-accent)
+		border-radius: 100%
+		cursor: pointer
+		background: var(--color-white)
+		position: absolute
+		top: 8px
+		right: 8px
+		svg
+			display: block
+			width: 12px
+			height: 12px
