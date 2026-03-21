@@ -7,6 +7,32 @@
 	grid-template-columns: repeat(3, minmax(0, 1fr))
 	gap: 30px
 
+.toggle
+	margin-bottom: 20px
+	background: #F9F9F9
+	padding: 4px
+	border-radius: 6px
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	gap: 4px
+	li
+		flex: 1
+		a
+			display: block
+			font-size: 12px
+			line-height: 1.2
+			font-weight: 600
+			padding: 10px
+			border-radius: 6px
+			color: #ADADAD
+			text-align: center
+			transition: var(--transition-ms)
+		&.active a,
+		&:hover a
+			color: var(--color-white)
+			background: var(--color-accent)
+
 @media (max-width: 1600px)
 	.grid
 		grid-template-columns: repeat(2, minmax(0, 1fr))

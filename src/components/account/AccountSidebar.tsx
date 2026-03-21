@@ -432,10 +432,9 @@ export default function AccountSidebar() {
                     </li>
                     <li>
                         <Link
-                            href={href("/account/bookings/pending")}
+                            href={href("/account/bookings/upcoming")}
                             className={cn(
-                                isActive("/account/bookings/pending", true) &&
-                                    styles.active,
+                                isActive("/account/bookings") && styles.active,
                             )}
                         >
                             <span className={styles.icon}>
@@ -459,8 +458,7 @@ export default function AccountSidebar() {
                         <Link
                             href={href("/account/settings/profile")}
                             className={cn(
-                                isActive("/account/settings", true) &&
-                                    styles.active,
+                                isActive("/account/settings") && styles.active,
                             )}
                         >
                             <span className={styles.avatar}>
