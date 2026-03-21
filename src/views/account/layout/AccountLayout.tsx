@@ -1,7 +1,7 @@
-import AccountSidebar from "@/components/account/AccountSidebar";
+import AccountSidebar from "./AccountSidebar";
 
 import styles from "./AccountLayout.module.sass";
-import AccountHeader from "../account/AccountHeader";
+import AccountHeader from "./AccountHeader";
 
 export default function AccountLayout({
     children,

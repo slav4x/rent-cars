@@ -1,4 +1,4 @@
-import styles from "./AccountView.module.sass";
+import styles from "../AccountView.module.sass";
 
 type Props = {
     eyebrow: string;

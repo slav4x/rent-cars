@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import AccountRulesPage from "@/views/account/AccountRulesPage";
+import AccountRulesPage from "@/views/account/pages/AccountRulesPage";
 
 export const metadata: Metadata = {
     title: "Правила бронирования",

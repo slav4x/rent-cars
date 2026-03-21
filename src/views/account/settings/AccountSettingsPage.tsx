@@ -1,10 +1,10 @@
-import view from "./AccountView.module.sass";
+import view from "../AccountView.module.sass";
 import styles from "./AccountSettingsPage.module.sass";
 import { type SettingsSection } from "@/data/mocks/account";
-import AccountSettingsNav from "@/components/account/AccountSettingsNav";
-import AccountSettingsProfilePage from "./settings/AccountSettingsProfilePage";
-import AccountSettingsVerificationPage from "./settings/AccountSettingsVerificationPage";
-import AccountSettingsPrivacyPage from "./settings/AccountSettingsPrivacyPage";
+import AccountSettingsNav from "../components/AccountSettingsNav";
+import AccountSettingsProfilePage from "./AccountSettingsProfilePage";
+import AccountSettingsVerificationPage from "./AccountSettingsVerificationPage";
+import AccountSettingsPrivacyPage from "./AccountSettingsPrivacyPage";
 
 type Props = {
     section: SettingsSection;

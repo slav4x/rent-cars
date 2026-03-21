@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import AccountSettingsPage from "@/views/account/AccountSettingsPage";
+import AccountSettingsPage from "@/views/account/settings/AccountSettingsPage";
 import {
     settingsSectionMeta,
     type SettingsSection,

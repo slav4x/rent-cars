@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import AccountBookingsPage from "@/views/account/AccountBookingsPage";
+import AccountBookingsPage from "@/views/account/pages/AccountBookingsPage";
 import {
     accountBookings,
     bookingStatusMeta,

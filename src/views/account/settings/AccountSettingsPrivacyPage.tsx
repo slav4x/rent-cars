@@ -1,4 +1,4 @@
-import AccountSettingsEditableField from "@/components/account/AccountSettingsEditableField";
+import AccountSettingsEditableField from "../components/AccountSettingsEditableField";
 import styles from "./AccountSettingsSection.module.sass";
 
 export default function AccountSettingsPrivacyPage() {

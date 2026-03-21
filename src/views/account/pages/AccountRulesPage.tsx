@@ -1,4 +1,4 @@
-import view from "./AccountView.module.sass";
+import view from "../AccountView.module.sass";
 import styles from "./AccountRules.module.sass";
 
 const rules = [

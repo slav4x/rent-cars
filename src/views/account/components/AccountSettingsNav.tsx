@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "@/views/account/AccountSettingsPage.module.sass";
+import styles from "../settings/AccountSettingsPage.module.sass";
 import { cn } from "@/lib/utils/cn";
 import type { SettingsSection } from "@/data/mocks/account";
 

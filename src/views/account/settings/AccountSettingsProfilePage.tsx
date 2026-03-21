@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./AccountSettingsSection.module.sass";
 import { useLangRouting } from "@/lib/i18n/useLangRouting";
 import Link from "next/link";
-import AccountSettingsEditableField from "@/components/account/AccountSettingsEditableField";
+import AccountSettingsEditableField from "../components/AccountSettingsEditableField";
 
 export default function AccountSettingsProfilePage() {
     const { href } = useLangRouting();

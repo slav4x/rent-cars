@@ -1,6 +1,6 @@
 "use client";
 
-import view from "./AccountView.module.sass";
+import view from "../AccountView.module.sass";
 import styles from "./AccountCatalog.module.sass";
 import { useMemo, useState } from "react";
 import { carCategories, type CarCategory } from "@/data/mocks/categories";

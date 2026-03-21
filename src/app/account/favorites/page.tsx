@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import AccountFavoritesPage from "@/views/account/AccountFavoritesPage";
+import AccountFavoritesPage from "@/views/account/pages/AccountFavoritesPage";
 
 export const metadata: Metadata = {
     title: "Избранное",

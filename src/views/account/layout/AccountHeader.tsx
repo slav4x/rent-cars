@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import styles from "./AccountHeader.module.sass";
-import { useT } from "@/lib/i18n/useT";
 import { useLangRouting } from "@/lib/i18n/useLangRouting";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -10,8 +9,6 @@ import { cn } from "@/lib/utils/cn";
 import Image from "next/image";
 
 export default function AccountHeader() {
-    const t = useT();
-
     const { isEn, switchHref, href } = useLangRouting();
 
     const raw = usePathname();

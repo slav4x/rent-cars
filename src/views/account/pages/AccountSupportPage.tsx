@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import view from "./AccountView.module.sass";
+import view from "../AccountView.module.sass";
 import styles from "./AccountSupport.module.sass";
 import { contacts, type CityContact } from "@/data/mocks/contacts";
 import { cn } from "@/lib/utils/cn";

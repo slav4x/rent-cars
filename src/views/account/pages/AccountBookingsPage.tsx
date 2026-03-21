@@ -1,11 +1,11 @@
-import view from "./AccountView.module.sass";
+import view from "../AccountView.module.sass";
 import styles from "./AccountBookingsPage.module.sass";
 import {
     bookingStatusMeta,
     type Booking,
     type BookingStatus,
 } from "@/data/mocks/account";
-import AccountBookingCard from "@/components/account/AccountBookingCard";
+import AccountBookingCard from "../components/AccountBookingCard";
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
 
