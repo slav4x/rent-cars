@@ -36,6 +36,17 @@ export default function LenisProvider({
 }: {
     children: React.ReactNode;
 }) {
+    useEffect(() => {
+        if (!("scrollRestoration" in window.history)) return;
+
+        const prev = window.history.scrollRestoration;
+        window.history.scrollRestoration = "manual";
+
+        return () => {
+            window.history.scrollRestoration = prev;
+        };
+    }, []);
+
     return (
         <ReactLenis
             root
