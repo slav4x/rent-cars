@@ -2,13 +2,29 @@
 
 import { ReactLenis, useLenis } from "lenis/react";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function LenisScrollToTop() {
     const lenis = useLenis();
     const pathname = usePathname();
+    const isFirstRender = useRef(true);
 
     useEffect(() => {
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+
+            const navigationEntry = performance
+                .getEntriesByType("navigation")
+                .at(0) as PerformanceNavigationTiming | undefined;
+
+            if (navigationEntry?.type === "reload") {
+                window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+                lenis?.scrollTo(0, { immediate: true });
+            }
+
+            return;
+        }
+
         lenis?.scrollTo(0, { immediate: true });
     }, [pathname, lenis]);
 
