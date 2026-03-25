@@ -1,4 +1,5 @@
 import "modern-normalize/modern-normalize.css";
+import "lenis/dist/lenis.css";
 import "./globals.sass";
 
 import { Manrope } from "next/font/google";
