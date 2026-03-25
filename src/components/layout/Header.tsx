@@ -91,7 +91,13 @@ export default function Header() {
                     href={href("/")}
                     className={cn(styles.logo, open && styles.logoBlack)}
                 >
-                    <img src="/img/svg/logo.svg" alt="VsemProkat" />
+                    <Image
+                        src="/img/svg/logo.svg"
+                        alt="VsemProkat"
+                        width={146}
+                        height={42}
+                        priority
+                    />
                 </Link>
 
                 <nav className={cn(styles.nav, open && styles.navHide)}>
