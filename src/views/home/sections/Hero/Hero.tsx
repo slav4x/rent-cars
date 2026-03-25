@@ -41,6 +41,7 @@ export default function Hero() {
                         className={styles.carsLeft}
                         data-aos="fade-up"
                         data-aos-delay="700"
+                        data-aos-duration="800"
                     />
                     <Image
                         src="/img/hero-cars-02.png"
@@ -52,6 +53,7 @@ export default function Hero() {
                         className={styles.carsMiddle}
                         data-aos="fade-up"
                         data-aos-delay="500"
+                        data-aos-duration="800"
                     />
                     <Image
                         src="/img/hero-cars-03.png"
@@ -63,6 +65,7 @@ export default function Hero() {
                         className={styles.carsRight}
                         data-aos="fade-up"
                         data-aos-delay="600"
+                        data-aos-duration="800"
                     />
                 </div>
                 <Image
