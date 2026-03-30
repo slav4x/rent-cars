@@ -204,7 +204,7 @@ export default function AccountSidebar() {
                                     />
                                 </svg>
                             </span>
-                            <p>Пользователи</p>
+                            <p>Аккаунты</p>
                         </Link>
                     </li>
                     <li>

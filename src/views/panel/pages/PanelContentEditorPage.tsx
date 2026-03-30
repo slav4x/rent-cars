@@ -1,5 +1,10 @@
+import PanelTop from "../layout/PanelTop";
 import styles from "./PanelContentEditorPage.module.sass";
 
 export default function PanelContentEditorPage() {
-    return <>Редактор страницы</>;
+    return (
+        <>
+            <PanelTop title="Редактор страницы" />
+        </>
+    );
 }

@@ -1,5 +1,10 @@
+import PanelTop from "../layout/PanelTop";
 import styles from "./PanelUserDetailsPage.module.sass";
 
 export default function PanelUserDetailsPage() {
-    return <>Страница пользователя</>;
+    return (
+        <>
+            <PanelTop title="Фио" />
+        </>
+    );
 }
