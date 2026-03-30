@@ -1,0 +1,30 @@
+.layout
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	height: 100svh
+	min-height: 0
+	overflow: hidden
+
+.content
+	padding: 30px 60px
+	flex: 1
+	overflow: auto
+	height: 100%
+	min-width: 0
+	min-height: 0
+	&::-webkit-scrollbar
+		display: none
+
+@media (max-width: 1200px)
+	.content
+		padding: 20px
+
+@media (max-width: 600px)
+	.layout
+		height: auto
+		overflow: initial
+		padding-bottom: 84px
+
+	.content
+		padding: 20px 8px
