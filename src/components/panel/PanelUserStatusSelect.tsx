@@ -3,17 +3,18 @@
 import { ChangeEvent } from "react";
 
 import { cn } from "@/lib/utils/cn";
+import type { UserAccountStatus } from "@/data/mocks/users";
 
-import styles from "./PanelCitySelect.module.sass";
+import styles from "./PanelUserStatusSelect.module.sass";
 
-const CITY_OPTIONS = [
-    { value: "saint-petersburg", label: "Санкт-Петербург" },
-    { value: "moscow", label: "Москва" },
-    { value: "sochi", label: "Сочи" },
-    { value: "murmansk", label: "Мурманск" },
+const STATUS_OPTIONS: { value: UserAccountStatus; label: string }[] = [
+    { value: "inactive", label: "Не активирован" },
+    { value: "pending", label: "На проверке" },
+    { value: "verified", label: "Подтвержден" },
+    { value: "rejected", label: "Отклонен" },
 ];
 
-type PanelCitySelectProps = {
+type PanelUserStatusSelectProps = {
     value?: string;
     onChange?: (value: string) => void;
     className?: string;
@@ -21,13 +22,13 @@ type PanelCitySelectProps = {
     placeholder?: string;
 };
 
-export default function PanelCitySelect({
+export default function PanelUserStatusSelect({
     value,
     onChange,
     className,
-    name = "city",
-    placeholder = "Все города",
-}: PanelCitySelectProps) {
+    name = "user-status",
+    placeholder = "Все статусы",
+}: PanelUserStatusSelectProps) {
     const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
         onChange?.(event.target.value);
     };
@@ -41,9 +42,9 @@ export default function PanelCitySelect({
                 className={styles.input}
             >
                 <option value="">{placeholder}</option>
-                {CITY_OPTIONS.map((city) => (
-                    <option key={city.value} value={city.value}>
-                        {city.label}
+                {STATUS_OPTIONS.map((status) => (
+                    <option key={status.value} value={status.value}>
+                        {status.label}
                     </option>
                 ))}
             </select>

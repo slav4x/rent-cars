@@ -1,17 +1,58 @@
-import PanelSearch from "@/components/panel/PanelSearch";
-import PanelTop from "../layout/PanelTop";
-import styles from "./PanelCarPage.module.sass";
-import PanelCitySelect from "@/components/panel/PanelCitySelect";
-import Link from "next/link";
+"use client";
 
-export default function PanelCarPage() {
+import Link from "next/link";
+import { useMemo, useState } from "react";
+
+import PanelCarCard from "@/components/panel/PanelCarCard";
+import PanelCitySelect from "@/components/panel/PanelCitySelect";
+import PanelSearch from "@/components/panel/PanelSearch";
+import { cars } from "@/data/mocks/cars";
+
+import PanelTop from "../layout/PanelTop";
+
+import styles from "./PanelCarsPage.module.sass";
+
+const carCities = ["saint-petersburg", "moscow", "sochi", "murmansk"] as const;
+
+const cityLabels: Record<(typeof carCities)[number], string> = {
+    "saint-petersburg": "Санкт-Петербург",
+    moscow: "Москва",
+    sochi: "Сочи",
+    murmansk: "Мурманск",
+};
+
+const adminCars = cars.map((car, index) => ({
+    ...car,
+    city: carCities[index % carCities.length],
+}));
+
+export default function PanelCarsPage() {
+    const [search, setSearch] = useState("");
+    const [city, setCity] = useState("");
+
+    const filteredCars = useMemo(() => {
+        const normalizedSearch = search.trim().toLowerCase();
+
+        return adminCars.filter((car) => {
+            const matchesCity = !city || car.city === city;
+            const matchesSearch =
+                !normalizedSearch ||
+                car.title.toLowerCase().includes(normalizedSearch);
+
+            return matchesCity && matchesSearch;
+        });
+    }, [city, search]);
+
     return (
-        <>
+        <section className={styles.page}>
             <PanelTop title="Автомобили">
-                <PanelCitySelect />
-                <PanelSearch placeholder="Поиск" />
-                <hr />
-                <Link href="#" style={{ marginLeft: "auto" }}>
+                <PanelCitySelect value={city} onChange={setCity} />
+                <PanelSearch
+                    value={search}
+                    onChange={setSearch}
+                    placeholder="Поиск"
+                />
+                <Link href="/panel/cars/new">
                     <svg
                         width="12"
                         height="12"
@@ -27,6 +68,16 @@ export default function PanelCarPage() {
                     Добавить авто
                 </Link>
             </PanelTop>
-        </>
+
+            <div className={styles.grid}>
+                {filteredCars.map((car) => (
+                    <PanelCarCard
+                        key={car.id}
+                        car={car}
+                        cityLabel={cityLabels[car.city]}
+                    />
+                ))}
+            </div>
+        </section>
     );
 }

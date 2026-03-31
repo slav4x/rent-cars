@@ -79,7 +79,7 @@ export default function AccountBookingCard({ booking, status }: Props) {
                 />
             </div>
             <div className={styles.content}>
-                <div className={styles.title}>{car.title}</div>
+                <div className={styles.title}>{booking.carTitle}</div>
 
                 <div className={styles.info}>
                     <div className={styles.city}>{booking.city}</div>

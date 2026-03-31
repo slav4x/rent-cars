@@ -1,14 +1,40 @@
-import PanelSearch from "@/components/panel/PanelSearch";
-import PanelTop from "../layout/PanelTop";
-import styles from "./PanelAdminsPage.module.sass";
+"use client";
+
 import Link from "next/link";
+import { useMemo, useState } from "react";
+
+import PanelAdminCard from "@/components/panel/PanelAdminCard";
+import PanelSearch from "@/components/panel/PanelSearch";
+import { admins } from "@/data/mocks/admins";
+
+import PanelTop from "../layout/PanelTop";
+
+import styles from "./PanelAdminsPage.module.sass";
 
 export default function PanelAdminsPage() {
+    const [search, setSearch] = useState("");
+
+    const filteredAdmins = useMemo(() => {
+        const normalizedSearch = search.trim().toLowerCase();
+
+        return admins.filter((admin) => {
+            return (
+                !normalizedSearch ||
+                admin.fullName.toLowerCase().includes(normalizedSearch) ||
+                admin.email.toLowerCase().includes(normalizedSearch)
+            );
+        });
+    }, [search]);
+
     return (
         <>
             <PanelTop title="Администраторы">
-                <PanelSearch placeholder="Поиск" />
-                <Link href="#">
+                <PanelSearch
+                    value={search}
+                    onChange={setSearch}
+                    placeholder="Поиск по имени или почте"
+                />
+                <Link href="/panel/admins/new">
                     <svg
                         width="12"
                         height="12"
@@ -24,6 +50,12 @@ export default function PanelAdminsPage() {
                     Добавить
                 </Link>
             </PanelTop>
+
+            <div className={styles.grid}>
+                {filteredAdmins.map((admin) => (
+                    <PanelAdminCard key={admin.id} admin={admin} />
+                ))}
+            </div>
         </>
     );
 }

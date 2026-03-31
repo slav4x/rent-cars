@@ -7,6 +7,7 @@ export type Booking = {
     id: string;
     status: BookingStatus;
     carId: string;
+    carTitle: string;
     pickupAt: string;
     returnAt: string;
     city: string;
@@ -73,6 +74,7 @@ export const accountBookings: Booking[] = [
         id: "BR-1001",
         status: "pending",
         carId: "1",
+        carTitle: "Toyota Camry 2021",
         pickupAt: "18 марта 2026, 10:00",
         returnAt: "21 марта 2026, 10:00",
         city: "Новосибирск",
@@ -82,6 +84,7 @@ export const accountBookings: Booking[] = [
         id: "BR-1003",
         status: "upcoming",
         carId: "2",
+        carTitle: "BMW M4 Competition",
         pickupAt: "04 апреля 2026, 09:00",
         returnAt: "07 апреля 2026, 09:00",
         city: "Сочи",
@@ -91,6 +94,7 @@ export const accountBookings: Booking[] = [
         id: "BR-1004",
         status: "upcoming",
         carId: "10",
+        carTitle: "Volkswagen ID.4",
         pickupAt: "16 апреля 2026, 11:00",
         returnAt: "20 апреля 2026, 11:00",
         city: "Краснодар",
@@ -100,6 +104,7 @@ export const accountBookings: Booking[] = [
         id: "BR-100",
         status: "upcoming",
         carId: "10",
+        carTitle: "Volkswagen ID.4",
         pickupAt: "16 апреля 2026, 11:00",
         returnAt: "20 апреля 2026, 11:00",
         city: "Краснодар",
@@ -109,6 +114,7 @@ export const accountBookings: Booking[] = [
         id: "BR-0995",
         status: "history",
         carId: "5",
+        carTitle: "Audi A6 Quattro",
         pickupAt: "10 февраля 2026, 10:00",
         returnAt: "13 февраля 2026, 10:00",
         city: "Москва",
@@ -118,6 +124,7 @@ export const accountBookings: Booking[] = [
         id: "BR-0988",
         status: "history",
         carId: "3",
+        carTitle: "Tesla Model 3",
         pickupAt: "20 января 2026, 14:00",
         returnAt: "23 января 2026, 14:00",
         city: "Санкт-Петербург",
