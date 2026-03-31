@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 
 import styles from "./PanelDashboardSelect.module.sass";
 
-type PanelDashboardSelectOption = {
+export type PanelDashboardSelectOption = {
     value: string;
     label: string;
 };
 
 type PanelDashboardSelectProps = {
     name?: string;
-    options: PanelDashboardSelectOption[];
+    options: readonly PanelDashboardSelectOption[];
     defaultValue?: string;
     value?: string;
     onChange?: (value: string) => void;
