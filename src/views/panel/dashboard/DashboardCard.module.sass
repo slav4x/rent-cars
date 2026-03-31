@@ -1,0 +1,96 @@
+.card
+	border-radius: 22px
+	background: #F9F9F9
+	padding: 20px
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	flex-direction: column
+
+.top
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	gap: 12px
+
+.title
+	font-size: 16px
+	font-weight: 600
+	line-height: 1.2
+
+.total
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	gap: 6px
+
+.totalValue
+	font-size: 50px
+	font-weight: 300
+	line-height: 1.2
+	font-family: var(--font-roadradio)
+	margin-bottom: -14px
+
+.totalDiff
+	font-size: 12px
+	font-weight: 500
+	line-height: 14px
+	margin-top: 13px
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	gap: 2px
+
+	&::before
+		content: ''
+		display: block
+		width: 8px
+		height: 10px
+		background-repeat: no-repeat
+		background-position: center
+
+	span
+		opacity: 0.6
+
+.totalDiffDown::before
+	background-image: url("data:image/svg+xml,%3Csvg width='8' height='10' viewBox='0 0 8 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.80631 6.75045L4.93997 9.61206C4.69018 9.86053 4.35228 10 4.00008 10C3.64787 10 3.30997 9.86053 3.06018 9.61206L0.19384 6.75045C0.0696865 6.62547 0 6.45641 0 6.28019C0 6.10397 0.0696865 5.9349 0.19384 5.80993C0.255808 5.74741 0.329534 5.69778 0.410764 5.66392C0.491994 5.63005 0.579122 5.61262 0.66712 5.61262C0.755118 5.61262 0.842245 5.63005 0.923475 5.66392C1.00471 5.69778 1.07843 5.74741 1.1404 5.80993L3.33348 8.00449V0.667041C3.33348 0.49013 3.40372 0.320466 3.52873 0.195372C3.65374 0.0702772 3.82329 0 4.00008 0C4.17687 0 4.34642 0.0702772 4.47143 0.195372C4.59644 0.320466 4.66667 0.49013 4.66667 0.667041V8.00449L6.85975 5.80993C6.98439 5.68432 7.15379 5.6134 7.33068 5.61278C7.50757 5.61215 7.67746 5.68187 7.80298 5.80659C7.9285 5.93131 7.99937 6.10082 8 6.27783C8.00062 6.45484 7.93095 6.62485 7.80631 6.75045Z' fill='%23EF3979'/%3E%3C/svg%3E%0A")
+
+.totalDiffUp::before
+	background-image: url("data:image/svg+xml,%3Csvg width='8' height='10' viewBox='0 0 8 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.80631 3.24955L4.93997 0.387941C4.69018 0.139467 4.35228 0 4.00008 0C3.64787 0 3.30997 0.139467 3.06018 0.387941L0.19384 3.24955C0.0696865 3.37453 0 3.54359 0 3.71981C0 3.89603 0.0696865 4.0651 0.19384 4.19007C0.255808 4.25259 0.329534 4.30222 0.410764 4.33608C0.491994 4.36995 0.579122 4.38738 0.66712 4.38738C0.755118 4.38738 0.842245 4.36995 0.923475 4.33608C1.00471 4.30222 1.07843 4.25259 1.1404 4.19007L3.33348 1.99551V9.33296C3.33348 9.50987 3.40372 9.67953 3.52873 9.80463C3.65374 9.92972 3.82329 10 4.00008 10C4.17687 10 4.34642 9.92972 4.47143 9.80463C4.59644 9.67953 4.66667 9.50987 4.66667 9.33296V1.99551L6.85975 4.19007C6.98439 4.31568 7.15379 4.3866 7.33068 4.38722C7.50757 4.38785 7.67746 4.31813 7.80298 4.19341C7.9285 4.06869 7.99937 3.89918 8 3.72217C8.00062 3.54516 7.93095 3.37515 7.80631 3.24955Z' fill='%2318D486'/%3E%3C/svg%3E%0A")
+
+.list
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	gap: 6px
+	margin-top: auto
+	width: 100%
+
+	li
+		padding: 16px 12px
+		border-radius: 12px
+		background: var(--color-white)
+		line-height: 20px
+		font-size: 16px
+		font-weight: 500
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		gap: 6px
+
+		p
+			flex: 1
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+
+		span
+			opacity: 0.6
+
+.chartWrap
+	width: 100%
+	margin-top: 18px
+
+@media (max-width: 768px)
+	.list
+		grid-template-columns: 1fr
