@@ -2,107 +2,111 @@
 
 import { useState } from "react";
 
+import PanelFieldInput from "@/components/panel/PanelFieldInput";
+import PanelFieldSelect from "@/components/panel/PanelFieldSelect";
 import PanelMediaUploader from "@/components/panel/PanelMediaUploader";
 import PanelWysiwyg from "@/components/panel/PanelWysiwyg";
 
 import PanelTop from "../layout/PanelTop";
 import styles from "./PanelCarFormPage.module.sass";
 
+const categoryOptions = [
+    { value: "sport", label: "Спорткары" },
+    { value: "business", label: "Бизнес" },
+    { value: "suv", label: "Внедорожники" },
+];
+
+const cityOptions = [
+    { value: "spb", label: "Санкт-Петербург" },
+    { value: "moscow", label: "Москва" },
+    { value: "sochi", label: "Сочи" },
+    { value: "murmansk", label: "Мурманск" },
+];
+
+const brandOptions = [
+    { value: "bmw", label: "BMW" },
+    { value: "mercedes", label: "Mercedes-Benz" },
+    { value: "porsche", label: "Porsche" },
+];
+
+const colorOptions = [
+    { value: "black", label: "Черный" },
+    { value: "white", label: "Белый" },
+    { value: "gray", label: "Серый" },
+];
+
+const fuelOptions = [
+    { value: "petrol", label: "Бензин" },
+    { value: "diesel", label: "Дизель" },
+    { value: "hybrid", label: "Гибрид" },
+];
+
+const transmissionOptions = [
+    { value: "automatic", label: "Автомат" },
+    { value: "robot", label: "Робот" },
+    { value: "manual", label: "Механика" },
+];
+
 export default function PanelCarFormPage() {
     const [description, setDescription] = useState("<p></p>");
+    const [seoDescription, setSeoDescription] = useState("<p></p>");
 
     return (
         <>
             <PanelTop title="Добавить автомобиль" />
             <div className={styles.form}>
                 <div className={styles.title}>Общая информация</div>
-                <label className={styles.label}>
-                    <p>Название</p>
-                    <input type="text" placeholder="Введите название" />
-                </label>
+                <PanelFieldInput
+                    label="Название"
+                    placeholder="Введите название"
+                />
                 <PanelMediaUploader />
-                <label className={styles.label}>
-                    <p>Категория</p>
-                    <select>
-                        <option value="" disabled selected>
-                            Выберите категорию автомобиля
-                        </option>
-                        <option value="Категория">Категория</option>
-                        <option value="Категория">Категория</option>
-                        <option value="Категория">Категория</option>
-                    </select>
-                </label>
-                <label className={styles.label}>
-                    <p>Город</p>
-                    <select>
-                        <option value="" disabled selected>
-                            Выберите город
-                        </option>
-                        <option value="Город">Город</option>
-                        <option value="Город">Город</option>
-                        <option value="Город">Город</option>
-                    </select>
-                </label>
-                <label className={styles.label}>
-                    <p>Видео с YouTube или Rutube</p>
-                    <input type="text" placeholder="Ссылка" />
-                </label>
-                <label className={styles.label}>
-                    <p>Марка</p>
-                    <select>
-                        <option value="" disabled selected>
-                            Выберите марку
-                        </option>
-                        <option value="Марка">Марка</option>
-                        <option value="Марка">Марка</option>
-                        <option value="Марка">Марка</option>
-                    </select>
-                </label>
-                <label className={styles.label}>
-                    <p>Цвет</p>
-                    <select>
-                        <option value="" disabled selected>
-                            Выберите цвет
-                        </option>
-                        <option value="Цвет">Цвет</option>
-                        <option value="Цвет">Цвет</option>
-                        <option value="Цвет">Цвет</option>
-                    </select>
-                </label>
-                <label className={styles.label}>
-                    <p>ID Авто</p>
-                    <input type="text" placeholder="Напишите ID" />
-                </label>
-                <label className={styles.label}>
-                    <p>Мощность (л.с.)</p>
-                    <input type="text" placeholder="Введите мощность" />
-                </label>
-                <label className={styles.label}>
-                    <p>Разгон до 100 км/ч (сек)</p>
-                    <input type="text" placeholder="Введите разгон" />
-                </label>
-                <label className={styles.label}>
-                    <p>Тип топлива</p>
-                    <select>
-                        <option value="" disabled selected>
-                            Выберите топливо
-                        </option>
-                        <option value="Топливо">Топливо</option>
-                        <option value="Топливо">Топливо</option>
-                        <option value="Топливо">Топливо</option>
-                    </select>
-                </label>
-                <label className={styles.label}>
-                    <p>Коробка передач</p>
-                    <select>
-                        <option value="" disabled selected>
-                            Выберите коробку передач
-                        </option>
-                        <option value="Коробка передач">Коробка передач</option>
-                        <option value="Коробка передач">Коробка передач</option>
-                        <option value="Коробка передач">Коробка передач</option>
-                    </select>
-                </label>
+                <PanelFieldSelect
+                    label="Категория"
+                    placeholder="Выберите категорию автомобиля"
+                    options={categoryOptions}
+                />
+                <PanelFieldSelect
+                    label="Город"
+                    placeholder="Выберите город"
+                    options={cityOptions}
+                />
+                <PanelFieldInput
+                    label="Видео с YouTube или Rutube"
+                    placeholder="Ссылка"
+                />
+                <PanelFieldSelect
+                    label="Марка"
+                    placeholder="Выберите марку"
+                    options={brandOptions}
+                />
+                <PanelFieldSelect
+                    label="Цвет"
+                    placeholder="Выберите цвет"
+                    options={colorOptions}
+                />
+                <PanelFieldInput
+                    label="ID Авто"
+                    placeholder="Напишите ID"
+                />
+                <PanelFieldInput
+                    label="Мощность (л.с.)"
+                    placeholder="Введите мощность"
+                />
+                <PanelFieldInput
+                    label="Разгон до 100 км/ч (сек)"
+                    placeholder="Введите разгон"
+                />
+                <PanelFieldSelect
+                    label="Тип топлива"
+                    placeholder="Выберите топливо"
+                    options={fuelOptions}
+                />
+                <PanelFieldSelect
+                    label="Коробка передач"
+                    placeholder="Выберите коробку передач"
+                    options={transmissionOptions}
+                />
                 <label className={styles.label}>
                     <p>Описание</p>
                     <PanelWysiwyg
@@ -112,36 +116,24 @@ export default function PanelCarFormPage() {
                     />
                 </label>
                 <div className={styles.title}>Стоимость</div>
-                <label className={styles.label}>
-                    <p>Сутки</p>
-                    <input type="text" placeholder="₽" />
-                </label>
-                <label className={styles.label}>
-                    <p>2-7 дней</p>
-                    <input type="text" placeholder="₽" />
-                </label>
-                <label className={styles.label}>
-                    <p>От 7 дней</p>
-                    <input type="text" placeholder="₽" />
-                </label>
-                <label className={styles.label}>
-                    <p>От 30 суток</p>
-                    <input type="text" placeholder="₽" />
-                </label>
-                <label className={styles.label}>
-                    <p>Стоимость 1 км свыше 200км в день</p>
-                    <input type="text" placeholder="руб./км." />
-                </label>
+                <PanelFieldInput label="Сутки" placeholder="₽" />
+                <PanelFieldInput label="2-7 дней" placeholder="₽" />
+                <PanelFieldInput label="От 7 дней" placeholder="₽" />
+                <PanelFieldInput label="От 30 суток" placeholder="₽" />
+                <PanelFieldInput
+                    label="Стоимость 1 км свыше 200км в день"
+                    placeholder="руб./км."
+                />
                 <div className={styles.title}>SEO</div>
-                <label className={styles.label}>
-                    <p>SEO заголовок</p>
-                    <input type="text" placeholder="Введите заголовок" />
-                </label>
+                <PanelFieldInput
+                    label="SEO заголовок"
+                    placeholder="Введите заголовок"
+                />
                 <label className={styles.label}>
                     <p>SEO описание</p>
                     <PanelWysiwyg
-                        value={description}
-                        onChange={setDescription}
+                        value={seoDescription}
+                        onChange={setSeoDescription}
                         placeholder="Введите SEO описание"
                     />
                 </label>
