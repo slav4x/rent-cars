@@ -1,0 +1,63 @@
+.root
+	border-radius: 16px
+	overflow: hidden
+	border: 1px solid rgba(53, 53, 53, 0.08)
+	background: #F4F4F4
+
+.toolbar
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	gap: 8px
+	padding: 12px
+	border-bottom: 1px solid rgba(53, 53, 53, 0.08)
+	background: #ECECEC
+
+.tool
+	// min-width: 42px
+	height: 32px
+	padding: 0 12px
+	border-radius: 10px
+	background: var(--color-white)
+	font-size: 12px
+	font-weight: 700
+	color: #353535
+
+.toolActive
+	background: var(--color-accent)
+	color: var(--color-white)
+
+.content
+	background: #F4F4F4
+
+.editor
+	min-height: 220px
+	padding: 16px 18px
+	font-size: 16px
+	font-weight: 500
+	line-height: 1.6
+	color: #353535
+
+	&:focus
+		outline: none
+
+	:global(p.is-editor-empty:first-child)::before
+		content: attr(data-placeholder)
+		color: rgba(53, 53, 53, 0.4)
+		float: left
+		height: 0
+		pointer-events: none
+
+	p
+		margin: 0 0 12px
+
+	ul,
+	ol
+		margin: 0 0 12px
+		padding-left: 22px
+
+	blockquote
+		margin: 0 0 12px
+		padding-left: 14px
+		border-left: 3px solid var(--color-accent)
+		color: rgba(53, 53, 53, 0.72)

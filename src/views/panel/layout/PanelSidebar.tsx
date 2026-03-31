@@ -126,7 +126,7 @@ export default function AccountSidebar() {
                         <Link
                             href={href("/panel/cars")}
                             className={cn(
-                                isActive("/panel/cars", true) && styles.active,
+                                isActive("/panel/cars", false) && styles.active,
                             )}
                         >
                             <span className={styles.icon}>
