@@ -183,7 +183,8 @@ export default function AccountSidebar() {
                         <Link
                             href={href("/panel/users")}
                             className={cn(
-                                isActive("/panel/users", true) && styles.active,
+                                isActive("/panel/users", false) &&
+                                    styles.active,
                             )}
                         >
                             <span className={styles.icon}>
@@ -243,7 +244,7 @@ export default function AccountSidebar() {
                         <Link
                             href={href("/panel/admins")}
                             className={cn(
-                                isActive("/panel/admins", true) &&
+                                isActive("/panel/admins", false) &&
                                     styles.active,
                             )}
                         >
