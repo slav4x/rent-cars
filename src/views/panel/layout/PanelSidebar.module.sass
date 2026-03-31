@@ -129,6 +129,33 @@
 .navMobile
 	display: none
 
+.head
+	padding: 20px 20px 0
+	display: flex
+	flex-wrap: nowrap
+	align-items: center
+	gap: 26px
+	transition: 300ms
+	span
+		background: var(--color-accent)
+		color: var(--color-white)
+		border-radius: 20px
+		font-size: 16px
+		line-height: 18px
+		font-weight: 600
+		padding: 10px 14px
+		text-align: center
+		overflow: hidden
+		transition: 300ms
+		white-space: nowrap
+
+.headHide
+	gap: 0
+	span
+		width: 0
+		height: 0
+		padding: 0
+
 @media (max-width: 1600px)
 	.sidebar
 		width: 410px
